@@ -1,0 +1,10 @@
+{
+  "name": "menu_api",
+  "version": "1.0.0",
+  "description": "Restaurants Menu Api",
+  "main": "server.js",
+  "repository": "https://github.com/Xlizer1/menu_api",
+  "author": "Mustafa Eltoum",
+  "license": "MIT",
+  "private": true
+}
