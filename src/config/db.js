@@ -4,7 +4,7 @@ const host =
   process.env.SERVER_HOST === undefined ? "localhost" : process.env.SERVER_HOST;
 const user = process.env.DB_USER === undefined ? "root" : process.env.DB_USER;
 const password = process.env.PASSWORD === undefined ? "" : process.env.PASSWORD;
-const database = process.env.DATABASE;
+const database = process.env.DATABASE === undefined ? "care_pulse" : process.env.DATABASE;
 
 let con;
 

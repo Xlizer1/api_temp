@@ -1,0 +1,103 @@
+[2024-05-18T19:59:15.337] [ERROR] errors - createNewUsersql: 
+          INSERT INTO
+            users
+          SET (
+            first_name,
+            last_name,
+            email,
+            password,
+            phone,
+            birthdate,
+            gender,
+            role_id,
+            created_by,
+            created_at
+          )
+          VALUES (
+            Mgustafa,
+            Eltgoum,
+            mustgafa_142@mail.ru,
+            $2b$10$Io1jrs0M7YtpMrYNqxq.Cu15x.P3AcZHxsjKPsOeqYgdBUCazYoeG,
+            00964781234567,
+            2001/04/24,
+            1,
+            1,
+            1,
+            NOW()
+          )
+        
+[2024-05-18T19:59:15.338] [ERROR] errors - createNewUser: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+            first_name,
+            last_name,
+            email,
+            ' at line 3
+[2024-05-18T19:59:53.936] [ERROR] errors - createNewUsersql: 
+          INSERT INTO
+            users
+          SET (
+            first_name,
+            last_name,
+            email,
+            password,
+            phone,
+            birthdate,
+            gender,
+            role_id,
+            created_by,
+            created_at
+          )
+          VALUES (
+            "Mgustafa",
+            "Eltgoum",
+            "mustgafa_142@mail.ru",
+            "$2b$10$z4.b6w/yyU8sOa3OwJ2XeuF2xLhyd3uPjRzVkKoZoRdGGUr/ElBky",
+            "00964781234567",
+            "2001/04/24",
+            1,
+            1,
+            1,
+            NOW()
+          )
+        
+[2024-05-18T19:59:53.938] [ERROR] errors - createNewUser: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+            first_name,
+            last_name,
+            email,
+            ' at line 3
+[2024-05-18T20:01:11.782] [ERROR] errors - createNewUsersql: 
+          INSERT INTO
+            users
+          SET (
+            first_name,
+            last_name,
+            email,
+            password,
+            phone,
+            birthdate,
+            gender,
+            role_id,
+            created_by,
+            created_at
+          )
+          VALUES (
+            "Mgustafa",
+            "Eltoum",
+            "mustgafa_142@mail.ru",
+            "$2b$10$WNTOyWhg9DiCdlRtodEHGuzGvx9rRPbEBiWwsL66WDg8xmDMJy7Ea",
+            "00964781234567",
+            "2001/04/24",
+            1,
+            1,
+            1,
+            NOW()
+          )
+        
+[2024-05-18T20:01:11.784] [ERROR] errors - createNewUser: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+            first_name,
+            last_name,
+            email,
+            ' at line 3
+[2024-05-18T20:25:50.519] [ERROR] errors - checkDataTokenValidationsql: select enabled from users where id=1 and deleted_at is null
+[2024-05-18T20:25:50.521] [ERROR] errors - checkDataTokenValidation: Error: ER_BAD_FIELD_ERROR: Unknown column 'enabled' in 'field list'
+[2024-05-18T20:28:15.460] [ERROR] errors - checkDataTokenValidationsql: select enabled from users where id=undefined and deleted_at is null
+[2024-05-18T20:28:15.462] [ERROR] errors - checkDataTokenValidation: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'

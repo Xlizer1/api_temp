@@ -2,46 +2,57 @@ const executeQuery = require("../../helper/common").executeQuery;
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
-async function createNewUser(data, userDetails, callback) {
+async function createNewUser(data, req, callback) {
   try {
-    const { user_id } = data;
-    const { first_name, last_name, username, password, email, role_id, phone, enabled, birthdate } = userDetails;
-    bcrypt
-      .hash(password, saltRounds)
-      .then(function (hashedPassword) {
-        var sql = `
-          INSERT INTO
-            users
-          SET (
-            first_name,
-            last_name,
-            username,
-            password,
-            email,
-            role_id,
-            phone,
-            enabled,
-            birthdate,
-            created_by,
-            created_at
-          )
-          VALUES (
-            ${first_name},
-            ${last_name},
-            ${username},
-            ${hashedPassword},
-            ${email},
-            ${role_id},
-            ${phone},
-            ${enabled},
-            ${birthdate},
-            ${user_id},
-            NOW()
-          )
-        `;
-        executeQuery(sql, "createNewUser", (result) => {
-          callback(result);
-        });
+    const { first_name, last_name, password, email, role_id, phone, gender, birthdate } = req.body;
+    bcrypt.hash(password, saltRounds).then(function (hashedPassword) {
+      var sql = `
+        INSERT INTO users (
+          first_name,
+          last_name,
+          email,
+          password,
+          phone,
+          birthdate,
+          gender,
+          role_id,
+          enabled,
+          created_by,
+          created_at
+        ) VALUES (
+          "${first_name}",
+          "${last_name}",
+          "${email}",
+          "${hashedPassword}",
+          "${phone}",
+          "${birthdate}",
+          ${gender},
+          ${role_id},
+          ${0},
+          ${1},
+          NOW()
+        )
+      `;
+      executeQuery(sql, "createNewUser", (result) => {
+        callback(result);
+      });
+    });
+  } catch (error) {
+    callback(false);
+    console.log(error);
+  }
+}
+
+async function getUsers(req, callback) {
+  try {
+      var sql = `
+        SELECT
+          *
+        FROM
+          users
+      `;
+      executeQuery(sql, "getUsers", (result) => {
+        callback(result);
       });
   } catch (error) {
     callback(false);
@@ -49,6 +60,8 @@ async function createNewUser(data, userDetails, callback) {
   }
 }
 
+
 module.exports = {
   createNewUser,
+  getUsers,
 };
