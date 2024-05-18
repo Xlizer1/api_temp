@@ -35,7 +35,7 @@ exports.generate = (data, NoExpire) => {
 };
 
 function checkDataTokenValidation(data, callback) {
-  var sql = `select enabled from users where user_id=${data.user_id} and deleted_at is null`;
+  var sql = `select enabled from users where id=${data.user_id} and deleted_at is null`;
   executeQuery(sql, "checkDataTokenValidation", (result) => {
     if (result && result.length > 0 && result[0].enabled) callback(true);
     else callback(false);
