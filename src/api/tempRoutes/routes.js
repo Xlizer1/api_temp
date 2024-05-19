@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require("./controller");
 
 router.get("/", (req, res) => {
-  controller.check(req, (response) => {
+  controller.tempController(req, (response) => {
     res.json(response);
   });
 });
