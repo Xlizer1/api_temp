@@ -12,7 +12,7 @@ const ip =
 let server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3002", // Update this with your React app's URL
+    origin: "http://localhost:3000", // Update this with your React app's URL
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
