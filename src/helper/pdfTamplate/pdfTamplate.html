@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <style>{{{customStyle}}}</style>
+  </head>
+  <body>
+
+    <table>
+
+      <tbody>
+        
+        {{#each datalist}}
+        <tr>
+          {{#each this}}
+            <td>{{this}}</td>
+          {{/each}}
+        </tr>
+      {{/each}}
+        
+        
+      </tbody>
+    </table>
+  </body>
+</html>

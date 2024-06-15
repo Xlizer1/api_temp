@@ -1,0 +1,5 @@
+{
+    "maxCharComment":150,
+    "maxCharSuggestions":150,
+    "maxCharRequestLocation":50
+}

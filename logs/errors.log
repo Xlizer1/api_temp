@@ -1,103 +1,1154 @@
-[2024-05-18T19:59:15.337] [ERROR] errors - createNewUsersql: 
-          INSERT INTO
-            users
-          SET (
-            first_name,
-            last_name,
-            email,
-            password,
-            phone,
-            birthdate,
-            gender,
-            role_id,
-            created_by,
-            created_at
-          )
-          VALUES (
-            Mgustafa,
-            Eltgoum,
-            mustgafa_142@mail.ru,
-            $2b$10$Io1jrs0M7YtpMrYNqxq.Cu15x.P3AcZHxsjKPsOeqYgdBUCazYoeG,
-            00964781234567,
-            2001/04/24,
-            1,
-            1,
-            1,
-            NOW()
-          )
-        
-[2024-05-18T19:59:15.338] [ERROR] errors - createNewUser: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
-            first_name,
-            last_name,
-            email,
-            ' at line 3
-[2024-05-18T19:59:53.936] [ERROR] errors - createNewUsersql: 
-          INSERT INTO
-            users
-          SET (
-            first_name,
-            last_name,
-            email,
-            password,
-            phone,
-            birthdate,
-            gender,
-            role_id,
-            created_by,
-            created_at
-          )
-          VALUES (
-            "Mgustafa",
-            "Eltgoum",
-            "mustgafa_142@mail.ru",
-            "$2b$10$z4.b6w/yyU8sOa3OwJ2XeuF2xLhyd3uPjRzVkKoZoRdGGUr/ElBky",
-            "00964781234567",
-            "2001/04/24",
-            1,
-            1,
-            1,
-            NOW()
-          )
-        
-[2024-05-18T19:59:53.938] [ERROR] errors - createNewUser: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
-            first_name,
-            last_name,
-            email,
-            ' at line 3
-[2024-05-18T20:01:11.782] [ERROR] errors - createNewUsersql: 
-          INSERT INTO
-            users
-          SET (
-            first_name,
-            last_name,
-            email,
-            password,
-            phone,
-            birthdate,
-            gender,
-            role_id,
-            created_by,
-            created_at
-          )
-          VALUES (
-            "Mgustafa",
-            "Eltoum",
-            "mustgafa_142@mail.ru",
-            "$2b$10$WNTOyWhg9DiCdlRtodEHGuzGvx9rRPbEBiWwsL66WDg8xmDMJy7Ea",
-            "00964781234567",
-            "2001/04/24",
-            1,
-            1,
-            1,
-            NOW()
-          )
-        
-[2024-05-18T20:01:11.784] [ERROR] errors - createNewUser: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
-            first_name,
-            last_name,
-            email,
-            ' at line 3
-[2024-05-18T20:25:50.519] [ERROR] errors - checkDataTokenValidationsql: select enabled from users where id=1 and deleted_at is null
-[2024-05-18T20:25:50.521] [ERROR] errors - checkDataTokenValidation: Error: ER_BAD_FIELD_ERROR: Unknown column 'enabled' in 'field list'
-[2024-05-18T20:28:15.460] [ERROR] errors - checkDataTokenValidationsql: select enabled from users where id=undefined and deleted_at is null
-[2024-05-18T20:28:15.462] [ERROR] errors - checkDataTokenValidation: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-04-30T22:52:28.396] [ERROR] errors - AxiosError: connect ETIMEDOUT 10.15.64.2:443
+    at AxiosError.from (C:\Users\musta\is\ticket_backend\node_modules\axios\dist\node\axios.cjs:836:14)
+    at RedirectableRequest.handleRequestError (C:\Users\musta\is\ticket_backend\node_modules\axios\dist\node\axios.cjs:3010:25)
+    at RedirectableRequest.emit (node:events:514:28)
+    at eventHandlers.<computed> (C:\Users\musta\is\ticket_backend\node_modules\follow-redirects\index.js:14:24)
+    at ClientRequest.emit (node:events:514:28)
+    at Socket.socketErrorListener (node:_http_client:501:9)
+    at Socket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  port: 443,
+  address: '10.15.64.2',
+  syscall: 'connect',
+  code: 'ETIMEDOUT',
+  errno: -4039,
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: AxiosHeaders {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'multipart/form-data; boundary=--------------------------761332411201455863091952',
+      Authorization: '6a3a6b0e039d06131c02d613f778467c456F88DDCA314D97279860A768BD8F3915175F98',
+      'User-Agent': 'axios/1.4.0',
+      'Content-Length': '413',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'http://10.15.64.2:443/customers.php',
+    data: FormData {
+      _overheadLength: 334,
+      _valueLength: 23,
+      _valuesToMeasure: [],
+      writable: false,
+      readable: true,
+      dataSize: 0,
+      maxDataSize: 2097152,
+      pauseStreams: true,
+      _released: true,
+      _streams: [],
+      _currentStream: null,
+      _insideLoop: false,
+      _pendingNext: false,
+      _boundary: '--------------------------761332411201455863091952',
+      _events: [Object: null prototype],
+      _eventsCount: 3
+    }
+  },
+  request: <ref *1> Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      buffered: [],
+      bufferedIndex: 0,
+      allBuffers: true,
+      allNoop: true,
+      pendingcb: 0,
+      constructed: true,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: true,
+      errored: null,
+      closed: false,
+      closeEmitted: false,
+      [Symbol(kOnFinished)]: []
+    },
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError],
+      socket: [Function: handleRequestSocket]
+    },
+    _eventsCount: 3,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'http:',
+      path: '/customers.php',
+      method: 'POST',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      lookup: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      hostname: '10.15.64.2',
+      port: '443',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/customers.php'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 413,
+    _requestBodyBuffers: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: '413',
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      socket: [Socket],
+      _header: 'POST /customers.php HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: multipart/form-data; boundary=--------------------------761332411201455863091952\r\n' +
+        'Authorization: 6a3a6b0e039d06131c02d613f778467c456F88DDCA314D97279860A768BD8F3915175F98\r\n' +
+        'User-Agent: axios/1.4.0\r\n' +
+        'Content-Length: 413\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: 10.15.64.2:443\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/customers.php',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: '10.15.64.2',
+      protocol: 'http:',
+      _redirectable: [Circular *1],
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'http://10.15.64.2:443/customers.php',
+    [Symbol(kCapture)]: false
+  },
+  cause: Error: connect ETIMEDOUT 10.15.64.2:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16) {
+    errno: -4039,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '10.15.64.2',
+    port: 443
+  }
+}
+[2024-05-26T20:34:17.628] [ERROR] errors - getNewSupplierssql: SELECT erp_customer_supplier_id
+    from technician_suppliers a where a.user_id= 1
+[2024-05-26T20:34:17.629] [ERROR] errors - getNewSuppliers: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:34:17.633] [ERROR] errors - login_activitysql: insert into activities set log_type_id=5 ,user_id= 1,note= 'xlizer login successfully from web' ,created_at=now() 
+[2024-05-26T20:34:17.633] [ERROR] errors - login_activity: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T20:34:17.636] [ERROR] errors - get user imagessql: select user_images.path from user_images where user_images.user_id=1 and user_images.is_default=1
+[2024-05-26T20:34:17.637] [ERROR] errors - get user images: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.user_images' doesn't exist
+[2024-05-26T20:34:17.747] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/roles' and method='GET' 
+[2024-05-26T20:34:17.748] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:34:17.749] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
+[2024-05-26T20:34:17.749] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+[2024-05-26T20:34:17.750] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-05-26 20:34:17',updated_at='2024-05-26 20:34:17' where id=undefined
+[2024-05-26T20:34:17.751] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:34:17.753] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-05-26T20:34:17.754] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-05-26T20:34:21.457] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/users/users' and method='GET' 
+[2024-05-26T20:34:21.457] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:34:21.457] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/departments/departments' and method='GET' 
+[2024-05-26T20:34:21.458] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:34:21.458] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
+[2024-05-26T20:34:21.458] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+[2024-05-26T20:34:21.459] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-05-26 20:34:21',updated_at='2024-05-26 20:34:21' where id=undefined
+[2024-05-26T20:34:21.459] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:34:21.460] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
+[2024-05-26T20:34:21.460] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+[2024-05-26T20:34:21.461] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-05-26 20:34:21',updated_at='2024-05-26 20:34:21' where id=undefined
+[2024-05-26T20:34:21.461] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:34:21.464] [ERROR] errors - getDepartmentssql: select department_id as dep_id,name from departments where deleted_at is null
+[2024-05-26T20:34:21.464] [ERROR] errors - getDepartments: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.departments' doesn't exist
+[2024-05-26T20:34:21.466] [ERROR] errors - getDepartmentssql: select department_id as dep_id,name from departments where deleted_at is null
+[2024-05-26T20:34:21.466] [ERROR] errors - getDepartments: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.departments' doesn't exist
+[2024-05-26T20:34:21.470] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:34:21.470] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:34:36.332] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/users/userslist' and method='GET' 
+[2024-05-26T20:34:36.333] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:34:36.333] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
+[2024-05-26T20:34:36.333] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+[2024-05-26T20:34:36.334] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-05-26 20:34:36',updated_at='2024-05-26 20:34:36' where id=undefined
+[2024-05-26T20:34:36.334] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:35:10.517] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/departments/departments' and method='GET' 
+[2024-05-26T20:35:10.517] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:35:10.518] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
+[2024-05-26T20:35:10.518] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+[2024-05-26T20:35:10.519] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-05-26 20:35:10',updated_at='2024-05-26 20:35:10' where id=undefined
+[2024-05-26T20:35:10.519] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
+[2024-05-26T20:35:10.520] [ERROR] errors - getDepartmentssql: select department_id as dep_id,name from departments where deleted_at is null
+[2024-05-26T20:35:10.520] [ERROR] errors - getDepartments: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.departments' doesn't exist
+[2024-05-26T20:48:22.293] [ERROR] errors - insertUsersql: BEGIN;
+                insert into users (username, password, name, email,wialon_host,department_id,phone,ip_phone,birthdate,created_at,account_name,wialon_username,telegram_username,default_route,allow_send_email,is_group_base_role,telegram_id) 
+                values ("pat1", "$2b$10$pw178tiXyPAUM46zZhKpmu28yLRSRprQNQNcj7VxRecdwzSKzFyYm", "mohammed","mohammed@email.com" ,"" 
+                ,2,"9647812345678","0","2024-05-26", "2024-05-26 20:48:22","","","","welcome_page",0,0,null);
+                INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+                        VALUES(1,LAST_INSERT_ID(),1,'{"username":"pat1","password":"Mustag252@","name":"mohammed","email":"mohammed@email.com","depId":2,"phone":"9647812345678","ip_phone":"0","birthdate":"2024-05-26","telegram_username":"","default_route":"welcome_page","allow_send_emails":0,"is_group_base_role":0,"telegram_id":null}','2024-05-26 20:48:22');
+                COMMIT;
+[2024-05-26T20:48:22.293] [ERROR] errors - insertUser: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T20:48:22.309] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:48:22.309] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:48:22.310] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:48:22.310] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:48:49.110] [ERROR] errors - updateUserDetailssql: BEGIN;
+        update users set name= "Mustafa Eltoum",email="mustafa.t@is.iq", department_id="1",phone="9647823741400",ip_phone=ip_phone
+        ,birthdate="2001-04-24", telegram_username=telegram_username, default_route="welcome_page", updated_at="2024-05-26 20:48:49" , allow_send_email=0,is_group_base_role=0,telegram_id=null where user_id=1;
+        INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+            VALUES(1, 1, 2,'{"name":"Mustafa Eltoum","email":"mustafa.t@is.iq","department_id":1,"phone":"9647823741400","ip_phone":0,"birthdate":"2001-04-24","telegram_username":null,"default_route":"welcome_page","allow_send_emails":0,"is_group_base_role":0,"telegram_id":null}', '2024-05-26 20:48:49');
+        COMMIT;
+[2024-05-26T20:48:49.110] [ERROR] errors - updateUserDetails: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T20:48:49.163] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:48:49.163] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:48:49.164] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:48:49.165] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:49:41.744] [ERROR] errors - login_activitysql: insert into activities set log_type_id=5 ,user_id= 2,note= 'pat1 login successfully from web' ,created_at=now() 
+[2024-05-26T20:49:41.744] [ERROR] errors - login_activity: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T20:49:41.831] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-05-26T20:49:41.832] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-05-26T20:49:47.026] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:49:47.026] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:49:47.027] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:49:47.027] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:49:55.220] [ERROR] errors - login_activitysql: insert into activities set log_type_id=5 ,user_id= 1,note= 'xlizer login successfully from web' ,created_at=now() 
+[2024-05-26T20:49:55.220] [ERROR] errors - login_activity: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T20:49:55.296] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-05-26T20:49:55.296] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-05-26T20:49:58.226] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:49:58.227] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:49:58.228] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:49:58.228] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:51:13.656] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:51:13.656] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:51:13.657] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:51:13.658] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:51:13.677] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:51:13.677] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:51:13.678] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:51:13.678] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:51:24.098] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-05-26T20:51:24.098] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-05-26T20:51:28.637] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:51:28.637] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:51:28.638] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:51:28.638] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:52:54.415] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:52:54.415] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:52:54.416] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:52:54.416] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:53:22.854] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:53:22.854] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:53:34.813] [ERROR] errors - updateUserDetailssql: BEGIN;
+        update users set name= "Mustafa Eltoum",email="mustafa.t@is.iq", department_id=department_id,phone="9647823741401",ip_phone=ip_phone
+        ,birthdate="2001-04-24", telegram_username=telegram_username, default_route=default_route, updated_at="2024-05-26 20:53:34" , allow_send_email=0,is_group_base_role=0,telegram_id=null where user_id=1;
+        INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+            VALUES(1, 1, 2,'{"name":"Mustafa Eltoum","email":"mustafa.t@is.iq","phone":"9647823741401","ip_phone":null,"birthdate":"2001-04-24"}', '2024-05-26 20:53:34');
+        COMMIT;
+[2024-05-26T20:53:34.814] [ERROR] errors - updateUserDetails: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T20:53:34.836] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:53:34.836] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:53:40.969] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:53:40.969] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:53:43.533] [ERROR] errors - updateUserDetailssql: BEGIN;
+        update users set name= "Mustafa Eltoum",email="mustafa.t@is.iq", department_id=department_id,phone="9647823741400",ip_phone=ip_phone
+        ,birthdate="2001-04-24", telegram_username=telegram_username, default_route=default_route, updated_at="2024-05-26 20:53:43" , allow_send_email=0,is_group_base_role=0,telegram_id=null where user_id=1;
+        INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+            VALUES(1, 1, 2,'{"name":"Mustafa Eltoum","email":"mustafa.t@is.iq","phone":"9647823741400","ip_phone":null,"birthdate":"2001-04-24"}', '2024-05-26 20:53:43');
+        COMMIT;
+[2024-05-26T20:53:43.534] [ERROR] errors - updateUserDetails: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T20:53:43.555] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:53:43.555] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:57:17.398] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T20:57:17.398] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T20:57:17.399] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T20:57:17.399] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:03:50.620] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T21:03:50.620] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:03:50.621] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T21:03:50.621] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:03:50.642] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T21:03:50.642] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:03:50.643] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T21:03:50.643] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:05:20.861] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T21:05:20.862] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:05:20.862] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T21:05:20.863] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:06:04.252] [ERROR] errors - insertUsersql: BEGIN;
+                insert into users (username, password, name, email,wialon_host,department_id,phone,ip_phone,birthdate,created_at,account_name,wialon_username,telegram_username,default_route,allow_send_email,is_group_base_role,telegram_id) 
+                values ("docAdmin", "$2b$10$d3APf7P/ug.pfiUoHSjziu/tmDuRh0XfWvu.lkY8PHXtWOrFQH4RC", "محمد علاء قاسم","docAdmin@mail.com" ,"" 
+                ,3,"9647812345678","0","2024-05-26", "2024-05-26 21:06:04","","","","welcome_page",0,0,null);
+                INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+                        VALUES(1,LAST_INSERT_ID(),1,'{"username":"docAdmin","password":"wa--1","name":"محمد علاء قاسم","email":"docAdmin@mail.com","depId":3,"phone":"9647812345678","ip_phone":0,"birthdate":"2024-05-26","telegram_username":"","default_route":"welcome_page","allow_send_emails":0,"is_group_base_role":0,"telegram_id":null}','2024-05-26 21:06:04');
+                COMMIT;
+[2024-05-26T21:06:04.252] [ERROR] errors - insertUser: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T21:06:04.281] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T21:06:04.285] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:06:04.291] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T21:06:04.292] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:06:04.293] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-26T21:06:04.293] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:08:14.944] [ERROR] errors - insertUsersql: BEGIN;
+                insert into users (username, password, name, email,wialon_host,department_id,phone,ip_phone,birthdate,created_at,account_name,wialon_username,telegram_username,default_route,allow_send_email,is_group_base_role,telegram_id) 
+                values ("pharmacist", "$2b$10$6u8ysBLrgT8b3V3H2KGozOnuq8PrJj5cSdxDlmEPIQ1w9YxYSeN02", "علي سمير محمود","pharmacist@mail.com" ,"" 
+                ,5,"9647812345678","0","2024-05-26", "2024-05-26 21:08:14","","","","welcome_page",0,0,null);
+                INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+                        VALUES(1,LAST_INSERT_ID(),1,'{"username":"pharmacist","password":"wa--1","name":"علي سمير محمود","email":"pharmacist@mail.com","depId":5,"phone":"9647812345678","ip_phone":0,"birthdate":"2024-05-26","telegram_username":"","default_route":"welcome_page","allow_send_emails":0,"is_group_base_role":0,"telegram_id":null}','2024-05-26 21:08:14');
+                COMMIT;
+[2024-05-26T21:08:14.944] [ERROR] errors - insertUser: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T21:08:14.957] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T21:08:14.957] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:08:14.958] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T21:08:14.958] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:08:14.959] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-26T21:08:14.960] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:08:14.961] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-05-26T21:08:14.961] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:09:28.165] [ERROR] errors - insertUsersql: BEGIN;
+                insert into users (username, password, name, email,wialon_host,department_id,phone,ip_phone,birthdate,created_at,account_name,wialon_username,telegram_username,default_route,allow_send_email,is_group_base_role,telegram_id) 
+                values ("doctor", "$2b$10$dingEoiBJksUzizaSzEom.bikR4.ZYEfAiuKjSPm1IHl6ldtHmSWa", "حسن محمد كاظم","doctor@mail.com" ,"" 
+                ,4,"9647812345678","0","2024-05-26", "2024-05-26 21:09:28","","","","welcome_page",0,0,null);
+                INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+                        VALUES(1,LAST_INSERT_ID(),1,'{"username":"doctor","password":"wa--1","name":"حسن محمد كاظم","email":"doctor@mail.com","depId":4,"phone":"9647812345678","ip_phone":0,"birthdate":"2024-05-26","telegram_username":"","default_route":"welcome_page","allow_send_emails":0,"is_group_base_role":0,"telegram_id":null}','2024-05-26 21:09:28');
+                COMMIT;
+[2024-05-26T21:09:28.165] [ERROR] errors - insertUser: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-26T21:09:28.181] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-26T21:09:28.182] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:09:28.182] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-26T21:09:28.183] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:09:28.183] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-26T21:09:28.184] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:09:28.184] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-05-26T21:09:28.184] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:09:28.186] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-05-26T21:09:28.186] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-26T21:34:13.196] [ERROR] errors - GetMaxErpLastUpdtedDatesql: SELECT IFNULL(max(`erp_last_updated_date`),0) as max_last_updated_date FROM `customers`;
+[2024-05-26T21:34:13.196] [ERROR] errors - GetMaxErpLastUpdtedDate: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.customers' doesn't exist
+[2024-05-28T19:21:23.686] [ERROR] errors - login_activitysql: insert into activities set log_type_id=5 ,user_id= 1,note= 'xlizer login successfully from web' ,created_at=now() 
+[2024-05-28T19:21:23.686] [ERROR] errors - login_activity: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
+[2024-05-28T19:21:23.780] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-05-28T19:21:23.780] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-05-28T19:21:26.461] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-28T19:21:26.461] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:21:28.967] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-28T19:21:28.967] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:21:28.968] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-28T19:21:28.969] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:21:28.970] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-28T19:21:28.970] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:21:28.971] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-05-28T19:21:28.972] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:21:28.973] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-05-28T19:21:28.973] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:24:34.470] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-28T19:24:34.470] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:24:34.473] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-28T19:24:34.473] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:24:34.474] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-28T19:24:34.475] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:24:34.476] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-05-28T19:24:34.476] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:24:34.477] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-05-28T19:24:34.477] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:29:48.233] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-28T19:29:48.233] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:29:48.234] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-28T19:29:48.235] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:29:48.236] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-28T19:29:48.236] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:29:48.237] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-05-28T19:29:48.237] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T19:29:48.238] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-05-28T19:29:48.238] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:07:49.656] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-28T20:07:49.656] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:07:49.657] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-28T20:07:49.658] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:07:49.659] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-28T20:07:49.659] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:07:49.660] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-05-28T20:07:49.660] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:07:49.661] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-05-28T20:07:49.661] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:14:07.416] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-28T20:14:07.417] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:14:07.418] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-28T20:14:07.418] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:14:07.419] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-28T20:14:07.419] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:14:07.420] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-05-28T20:14:07.421] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:14:07.422] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-05-28T20:14:07.423] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:15:08.449] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-05-28T20:15:08.449] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:15:08.450] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-05-28T20:15:08.450] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:15:08.451] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-05-28T20:15:08.451] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:15:08.452] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-05-28T20:15:08.452] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:15:08.452] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-05-28T20:15:08.452] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-05-28T20:29:46.159] [ERROR] errors - GetMaxErpLastUpdtedDatesql: SELECT IFNULL(max(`erp_last_updated_date`),0) as max_last_updated_date FROM `customers`;
+[2024-05-28T20:29:46.159] [ERROR] errors - GetMaxErpLastUpdtedDate: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.customers' doesn't exist
+[2024-05-31T19:04:46.034] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-05-31T19:04:46.035] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-06-05T18:56:50.955] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-06-05T18:56:50.956] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-06-05T18:59:13.048] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-06-05T18:59:13.048] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-05T18:59:13.049] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-06-05T18:59:13.049] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-05T18:59:13.050] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-06-05T18:59:13.050] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-05T18:59:13.051] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-06-05T18:59:13.051] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-05T18:59:13.052] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-06-05T18:59:13.052] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T13:51:36.224] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-06-07T13:51:36.224] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-06-07T13:52:44.333] [ERROR] errors - getRolessql: select a.role_id,
+    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
+    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
+    from roles a
+[2024-06-07T13:52:44.333] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.task_type' doesn't exist
+[2024-06-07T14:43:05.947] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-06-07T14:43:05.947] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:43:05.949] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-06-07T14:43:05.949] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:43:05.950] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-06-07T14:43:05.951] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:43:05.952] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-06-07T14:43:05.952] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:43:05.953] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-06-07T14:43:05.953] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:45:56.423] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 1
+    
+[2024-06-07T14:45:56.424] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:45:56.426] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 2
+    
+[2024-06-07T14:45:56.426] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:45:56.427] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 3
+    
+[2024-06-07T14:45:56.427] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:45:56.428] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 5
+    
+[2024-06-07T14:45:56.428] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-07T14:45:56.429] [ERROR] errors - getSuppliersIDssql: 
+        SELECT DISTINCT
+            c.erp_customer_supplier_id,
+            c.erp_customer_supplier
+        FROM technician_suppliers ts
+        JOIN customers c ON ts.erp_customer_supplier_id = c.erp_customer_supplier_id
+        WHERE ts.user_id = 4
+    
+[2024-06-07T14:45:56.429] [ERROR] errors - getSuppliersIDs: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.technician_suppliers' doesn't exist
+[2024-06-09T21:39:32.050] [ERROR] errors - getUserssql: SELECT a.*,a.last_login_date AS last_login   from users a 
+    where a.deleted_at is null AND a.department_id != 12 AND a.department_id = 3 LIMIT NaN,undefined
+[2024-06-09T21:39:32.052] [ERROR] errors - getUsers: Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2024-06-09T21:42:42.166] [ERROR] errors - getUserssql: SELECT a.*,a.last_login_date AS last_login   from users a 
+    where a.deleted_at is null AND a.department_id != 12 AND a.department_id = 3 LIMIT NaN,undefined
+[2024-06-09T21:42:42.167] [ERROR] errors - getUsers: Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN

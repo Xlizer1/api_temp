@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "617503884572",
+    "project_id": "ticket-system-25d9a",
+    "storage_bucket": "ticket-system-25d9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617503884572:android:5e7c32700ebae5e639a6d9",
+        "android_client_info": {
+          "package_name": "com.is.ticketsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617503884572-c0r4jdpe9q9vr7ogc4n606jgg28d8vd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQNM9kXyvePcA6HALcIsrM8sWMgQCpomM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617503884572-c0r4jdpe9q9vr7ogc4n606jgg28d8vd0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
