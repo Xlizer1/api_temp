@@ -15,6 +15,11 @@ const groupRoutes = require("./src/api/groups/groupRoutes.js");
 const userGroupRoutes = require("./src/api/userGroups/userGroupRoutes.js");
 const updateContentRoutes = require("./src/api/updateContent/updateContentRoutes.js");
 
+
+const appointmentsRoutes = require("./src/api/appointments/appointmentsRoutes.js");
+
+
+
 const home = require("./src/helper/home");
 const handleRecordingUsersHit = require("./src/api/handleRecordingUsersHit.js");
 
@@ -41,6 +46,9 @@ app.use("/user_images", userImagesRoutes);
 app.use("/groups", groupRoutes);
 app.use("/user_groups", userGroupRoutes);
 app.use("/update_contents", updateContentRoutes);
+
+
+app.use("/appointments", appointmentsRoutes);
 
 app.use("/", home);
 

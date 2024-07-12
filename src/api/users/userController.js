@@ -104,7 +104,6 @@ function getUsers(allUsers,req,response){
         if (data) {
             var user_id = allUsers ? null : req.params.user_id
             var haveRole = data.roles_id.includes(1) || data.roles_id.includes(2)
-
             try {
                 var searchFields = JSON.parse(req.query.params).searchFields;
             } catch (error) {
@@ -177,7 +176,7 @@ function getUsers(allUsers,req,response){
                 var active_status = 0;
             } 
 
-            console.log(req.query)
+            console.log(searchFields)
             
             depModel.getDepartments(false, departments=>{
                     if(departments) {

@@ -1152,3 +1152,365 @@
 [2024-06-09T21:42:42.166] [ERROR] errors - getUserssql: SELECT a.*,a.last_login_date AS last_login   from users a 
     where a.deleted_at is null AND a.department_id != 12 AND a.department_id = 3 LIMIT NaN,undefined
 [2024-06-09T21:42:42.167] [ERROR] errors - getUsers: Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2024-06-19T14:39:42.743] [ERROR] errors - getAppointmentssql: 
+        INSERT INTO
+            appointments (
+                patient_id,
+                doc_id,
+                condition,
+                date,
+                created_by,
+                created_at
+            )
+        VALUES (
+            2,
+            3,
+            susu queen,
+            undefined,
+            1,
+            NOW(),
+        );
+      
+[2024-06-19T14:39:42.744] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'condition,
+                date,
+                created_by,
+                cre' at line 5
+[2024-06-19T14:40:21.155] [ERROR] errors - getAppointmentssql: 
+        INSERT INTO
+            appointments (
+                patient_id,
+                doc_id,
+                condition,
+                date,
+                created_by,
+                created_at
+            )
+        VALUES (
+            2,
+            3,
+            "susu queen",
+            "2024-06-29T11:40:12.000Z",
+            1,
+            NOW(),
+        );
+      
+[2024-06-19T14:40:21.156] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'condition,
+                date,
+                created_by,
+                cre' at line 5
+[2024-06-19T14:41:16.003] [ERROR] errors - getAppointmentssql: 
+        INSERT INTO
+            appointments (
+                patient_id,
+                doc_id,
+                condition,
+                date,
+                created_by,
+                created_at
+            )
+        VALUES (
+            2,
+            3,
+            "susu queen",
+            "2024-06-07T11:41:07.000Z",
+            1,
+            NOW()
+        );
+      
+[2024-06-19T14:41:16.004] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'condition,
+                date,
+                created_by,
+                cre' at line 5
+[2024-06-19T14:41:58.370] [ERROR] errors - getAppointmentssql: 
+        INSERT INTO
+            appointments (
+                patient_id,
+                doc_id,
+                condition,
+                date,
+                created_by,
+                created_at,
+            )
+        VALUES (
+            2,
+            3,
+            "cd",
+            "undefined",
+            1,
+            NOW(),
+        );
+      
+[2024-06-19T14:41:58.371] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'condition,
+                date,
+                created_by,
+                cre' at line 5
+[2024-06-19T14:43:20.367] [ERROR] errors - getAppointmentssql: 
+        INSERT INTO
+            appointments (
+                patient_id,
+                doc_id,
+                condition,
+                date,
+                created_by,
+                created_at
+            )
+        VALUES (
+            2,
+            3,
+            "cd",
+            "2024-06-22T11:43:14.000Z",
+            1,
+            NOW()
+        );
+      
+[2024-06-19T14:43:20.368] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'condition,
+                date,
+                created_by,
+                cre' at line 5
+[2024-06-19T14:53:09.782] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            appointments.*,
+            u.name,
+            u.birthdate
+        FROM
+            appointments a
+        WHERE 
+            deleted_at IS NULL;
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+    
+[2024-06-19T14:53:09.782] [ERROR] errors - getAppointments: Error: ER_BAD_TABLE_ERROR: Unknown table 'appointments'
+[2024-06-19T14:54:45.435] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            appointments.*,
+            u.name,
+            u.birthdate
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            deleted_at IS NULL;
+    
+[2024-06-19T14:54:45.436] [ERROR] errors - getAppointments: Error: ER_BAD_TABLE_ERROR: Unknown table 'appointments'
+[2024-06-19T14:55:05.564] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            appointments.*,
+            u.name,
+            u.birthdate
+        FROM
+            appointments
+        WHERE 
+            deleted_at IS NULL;
+        LEFT JOIN
+            users u on u.user_id = appointments.patient_id
+    
+[2024-06-19T14:55:05.565] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'u.name' in 'field list'
+[2024-06-19T14:55:14.390] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            appointments.*
+        FROM
+            appointments
+        WHERE 
+            deleted_at IS NULL;
+        LEFT JOIN
+            users u on u.user_id = appointments.patient_id
+    
+[2024-06-19T14:55:14.391] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN
+            users u on u.user_id = appointments.patient_id' at line 1
+[2024-06-19T14:55:22.073] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            *
+        FROM
+            appointments
+        WHERE 
+            deleted_at IS NULL;
+        LEFT JOIN
+            users u on u.user_id = appointments.patient_id
+    
+[2024-06-19T14:55:22.074] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN
+            users u on u.user_id = appointments.patient_id' at line 1
+[2024-06-19T14:55:24.349] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            *
+        FROM
+            appointments
+        WHERE 
+            deleted_at IS NULL;
+        LEFT JOIN
+            users u on u.user_id = appointments.patient_id
+    
+[2024-06-19T14:55:24.350] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN
+            users u on u.user_id = appointments.patient_id' at line 1
+[2024-06-19T14:55:59.950] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            appointments.*,
+            u.name,
+            u.birthdate
+        FROM
+            appointments a
+        WHERE 
+            deleted_at IS NULL
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+    
+[2024-06-19T14:55:59.951] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT JOIN
+            users u on u.user_id = a.patient_id' at line 9
+[2024-06-19T14:57:11.259] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            appointments.*,
+            u.name,
+            u.birthdate
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            deleted_at IS NULL
+    
+[2024-06-19T14:57:11.268] [ERROR] errors - getAppointments: Error: ER_BAD_TABLE_ERROR: Unknown table 'appointments'
+[2024-06-19T14:57:29.728] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            deleted_at IS NULL
+    
+[2024-06-19T14:57:29.729] [ERROR] errors - getAppointments: Error: ER_NON_UNIQ_ERROR: Column 'deleted_at' in where clause is ambiguous
+[2024-06-22T18:27:06.073] [ERROR] errors - getAppointmentssql: 
+        UPDATE
+            appointments
+        SET
+            deleted_by = 1,
+            deleted_at = NOW()
+        WHERE
+            appointment_id = undefined;
+    
+[2024-06-22T18:27:06.074] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'appointment_id' in 'where clause'
+[2024-06-22T18:27:14.349] [ERROR] errors - getAppointmentssql: 
+        UPDATE
+            appointments
+        SET
+            deleted_by = 1,
+            deleted_at = NOW()
+        WHERE
+            appointment_id = undefined;
+    
+[2024-06-22T18:27:14.349] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'appointment_id' in 'where clause'
+[2024-06-22T18:27:20.497] [ERROR] errors - getAppointmentssql: 
+        UPDATE
+            appointments
+        SET
+            deleted_by = 1,
+            deleted_at = NOW()
+        WHERE
+            appointment_id = undefined;
+    
+[2024-06-22T18:27:20.497] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'appointment_id' in 'where clause'
+[2024-06-22T18:27:37.604] [ERROR] errors - getAppointmentssql: 
+        UPDATE
+            appointments
+        SET
+            deleted_by = 1,
+            deleted_at = NOW()
+        WHERE
+            appointment_id = undefined;
+    
+[2024-06-22T18:27:37.606] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'appointment_id' in 'where clause'
+[2024-06-22T18:28:01.756] [ERROR] errors - getAppointmentssql: 
+        UPDATE
+            appointments
+        SET
+            deleted_by = 1,
+            deleted_at = NOW()
+        WHERE
+            appointment_id = undefined;
+    
+[2024-06-22T18:28:01.758] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'appointment_id' in 'where clause'
+[2024-06-22T18:28:48.032] [ERROR] errors - getAppointmentssql: 
+        UPDATE
+            appointments
+        SET
+            deleted_by = 1,
+            deleted_at = NOW()
+        WHERE
+            appointment_id = undefined;
+    
+[2024-06-22T18:28:48.033] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'appointment_id' in 'where clause'
+[2024-06-22T18:29:40.080] [ERROR] errors - getAppointmentssql: 
+        UPDATE
+            appointments
+        SET
+            deleted_by = 1,
+            deleted_at = NOW()
+        WHERE
+            id = undefined;
+    
+[2024-06-22T18:29:40.082] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-06-22T18:30:32.461] [ERROR] errors - getAppointmentssql: 
+        UPDATE
+            appointments
+        SET
+            deleted_by = 1,
+            deleted_at = NOW()
+        WHERE
+            id = undefined;
+    
+[2024-06-22T18:30:32.462] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-06-22T18:52:58.543] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     a.date = 2024-06-22T15:48:14.273Z
+[2024-06-22T18:52:58.544] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.date = 2024-06-22T15:48:14.273Z' at line 11
+[2024-06-22T18:53:10.081] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     a.date = "2024-06-22T15:48:14.273Z"
+[2024-06-22T18:53:10.082] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.date = "2024-06-22T15:48:14.273Z"' at line 11
+[2024-06-22T18:53:10.885] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     a.date = "2024-06-22T15:48:14.273Z"
+[2024-06-22T18:53:10.886] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.date = "2024-06-22T15:48:14.273Z"' at line 11
+[2024-06-22T18:53:11.409] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     a.date = "2024-06-22T15:48:14.273Z"
+[2024-06-22T18:53:11.410] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.date = "2024-06-22T15:48:14.273Z"' at line 11
