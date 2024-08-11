@@ -1,8 +1,8 @@
 const executeQuery = require("../../helper/common").executeQuery;
 
 async function getAppointments(params, callBack) {
-	const { date } = params;
-	var sql = `
+  const { date } = params;
+  var sql = `
         SELECT
             a.*,
             u.name,
@@ -14,19 +14,22 @@ async function getAppointments(params, callBack) {
         WHERE 
             a.deleted_at IS NULL
     `;
-	if (date) {
-		sql += ` AND DATE(a.date) = '${date}'`;
-	}
-	executeQuery(sql, "getAppointments", (result) => {
-		if (result) callBack(result);
-		else callBack(false);
-	});
+  if (date) {
+    sql += ` AND DATE(a.date) = '${date}'`;
+  }
+  executeQuery(sql, "getAppointments", (result) => {
+    if (result) callBack(result);
+    else callBack(false);
+  });
 }
 
 async function createAppointments(data, params, callBack) {
-	const user_id = data?.user_id;
-	const { patient_id, doc_id, condition, date } = params;
-	var sql = `
+  const user_id = data?.user_id;
+  const { patient_id, doc_id, condition, date } = params;
+
+  console.log(date);
+
+  var sql = `
         INSERT INTO
             appointments (
                 patient_id,
@@ -45,16 +48,16 @@ async function createAppointments(data, params, callBack) {
             NOW()
         );
     `;
-	executeQuery(sql, "getAppointments", (result) => {
-		if (result) callBack(true);
-		else callBack(false);
-	});
+  executeQuery(sql, "getAppointments", (result) => {
+    if (result) callBack(true);
+    else callBack(false);
+  });
 }
 
 async function updateAppointments(data, params, callBack) {
-	const user_id = data?.user_id;
-	const { appo_id, patient_id, doc_id, condition, date } = params;
-	var sql = `
+  const user_id = data?.user_id;
+  const { appo_id, patient_id, doc_id, condition, date } = params;
+  var sql = `
         UPDATE
             appointments
         SET
@@ -67,16 +70,31 @@ async function updateAppointments(data, params, callBack) {
         WHERE
             id = ${appo_id};
     `;
-	executeQuery(sql, "getAppointments", (result) => {
-		console.log(result);
-		if (result) callBack(true);
-		else callBack(false);
-	});
+  executeQuery(sql, "getAppointments", (result) => {
+    if (result) callBack(true);
+    else callBack(false);
+  });
+}
+
+async function updateAppointmentsDone(data, params, callBack) {
+  const { appo_id, status_id } = params;
+  var sql = `
+        UPDATE
+            appointments
+        SET
+            status_id = ${status_id}
+        WHERE
+            id = ${appo_id};
+    `;
+  executeQuery(sql, "getAppointments", (result) => {
+    if (result) callBack(true);
+    else callBack(false);
+  });
 }
 
 async function deleteAppointments(data, appo_id, callBack) {
-	const user_id = data?.user_id;
-	var sql = `
+  const user_id = data?.user_id;
+  var sql = `
         UPDATE
             appointments
         SET
@@ -85,15 +103,16 @@ async function deleteAppointments(data, appo_id, callBack) {
         WHERE
             id = ${appo_id};
     `;
-	executeQuery(sql, "getAppointments", (result) => {
-		if (result && result.affectedRows) callBack(true);
-		else callBack(false);
-	});
+  executeQuery(sql, "getAppointments", (result) => {
+    if (result && result.affectedRows) callBack(true);
+    else callBack(false);
+  });
 }
 
 module.exports = {
-	getAppointments,
-	createAppointments,
-	updateAppointments,
-	deleteAppointments,
+  getAppointments,
+  createAppointments,
+  updateAppointments,
+  deleteAppointments,
+  updateAppointmentsDone,
 };
