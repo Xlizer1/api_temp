@@ -1,7 +1,8 @@
 const executeQuery = require("../../helper/common").executeQuery;
 
 async function getAppointments(params, callBack) {
-  const { date } = params;
+  const { date, patient_name, doc_id, statuses_id } = params;
+
   var sql = `
         SELECT
             a.*,
@@ -14,9 +15,23 @@ async function getAppointments(params, callBack) {
         WHERE 
             a.deleted_at IS NULL
     `;
+
   if (date) {
     sql += ` AND DATE(a.date) = '${date}'`;
   }
+
+  if (patient_name) {
+    sql += ` AND u.name LIKE "%${patient_name}%"`;
+  }
+
+  // if (doc_id) {
+  //   sql += ` AND DATE(a.date) = '${date}'`;
+  // }
+
+  if (statuses_id) {
+    sql += ` AND a.status_id = ${JSON.parse(statuses_id)}`;
+  }
+
   executeQuery(sql, "getAppointments", (result) => {
     if (result) callBack(result);
     else callBack(false);
