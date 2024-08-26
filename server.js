@@ -19,7 +19,7 @@ const io = socketIo(server, {
   }
 });
 
-const mqttClient = mqtt.connect("mqtt://51.21.2.210:1883");
+const mqttClient = mqtt.connect("mqtt://13.48.192.48:1883");
 
 mqttClient.on("connect", () => {
   console.log("Connected to MQTT broker");
