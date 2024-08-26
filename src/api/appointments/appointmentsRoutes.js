@@ -20,6 +20,12 @@ router.put("/:appo_id", (req, res) => {
   });
 });
 
+router.put("/done/:appo_id", (req, res) => {
+  appointmentsController.updateAppointmentsDone(req, (response) => {
+    res.json(response);
+  });
+});
+
 router.delete("/:appo_id", (req, res) => {
   appointmentsController.deleteAppointments(req, (response) => {
     res.json(response);

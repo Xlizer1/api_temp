@@ -1514,214 +1514,55 @@
             a.deleted_at IS NULL
      a.date = "2024-06-22T15:48:14.273Z"
 [2024-06-22T18:53:11.410] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.date = "2024-06-22T15:48:14.273Z"' at line 11
-[2024-07-14T21:18:05.601] [ERROR] errors - getNewPermissionssql: SELECT if((select b.task_type_id from roles b where b.role_id = a.role_id)is null,a.role_id,null) as role_id,
-        if((select c.task_type_id from roles c where c.role_id = a.role_id)is null,null,(select d.task_type_id from roles d where d.role_id=a.role_id)) as task_type_id
-        from permissions a where a.user_id= 1 
-[2024-07-14T21:18:05.602] [ERROR] errors - getNewPermissions: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.permissions' doesn't exist
-[2024-07-14T21:18:05.613] [ERROR] errors - login_activitysql: insert into activities set log_type_id=5 ,user_id= 1,note= 'xlizer login successfully from web' ,created_at=now() 
-[2024-07-14T21:18:05.613] [ERROR] errors - login_activity: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.activities' doesn't exist
-[2024-07-14T21:18:05.624] [ERROR] errors - get user imagessql: select user_images.path from user_images where user_images.user_id=1 and user_images.is_default=1
-[2024-07-14T21:18:05.625] [ERROR] errors - get user images: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.user_images' doesn't exist
-[2024-07-14T21:18:05.718] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/roles' and method='GET' 
-[2024-07-14T21:18:05.718] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T21:18:05.724] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T21:18:05.725] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T21:18:05.727] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 21:18:05',updated_at='2024-07-14 21:18:05' where id=undefined
-[2024-07-14T21:18:05.727] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T21:18:05.731] [ERROR] errors - getRolessql: select a.role_id,
-    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
-    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
-    from roles a
-[2024-07-14T21:18:05.732] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.roles' doesn't exist
-[2024-07-14T21:18:07.940] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/users/users' and method='GET' 
-[2024-07-14T21:18:07.940] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T21:18:07.942] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/departments/departments' and method='GET' 
-[2024-07-14T21:18:07.943] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T21:18:07.944] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T21:18:07.944] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T21:18:07.946] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 21:18:07',updated_at='2024-07-14 21:18:07' where id=undefined
-[2024-07-14T21:18:07.947] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T21:18:07.949] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T21:18:07.950] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T21:18:07.952] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 21:18:07',updated_at='2024-07-14 21:18:07' where id=undefined
-[2024-07-14T21:18:07.952] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T21:18:07.960] [ERROR] errors - getDepartmentssql: select department_id as dep_id,name from departments where deleted_at is null
-[2024-07-14T21:18:07.960] [ERROR] errors - getDepartments: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.departments' doesn't exist
-[2024-07-14T21:18:07.963] [ERROR] errors - getDepartmentssql: select department_id as dep_id,name from departments where deleted_at is null
-[2024-07-14T21:18:07.963] [ERROR] errors - getDepartments: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.departments' doesn't exist
-[2024-07-14T23:03:06.378] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/roles' and method='GET' 
-[2024-07-14T23:03:06.380] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:03:06.383] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T23:03:06.384] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T23:03:06.386] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 23:03:06',updated_at='2024-07-14 23:03:06' where id=undefined
-[2024-07-14T23:03:06.387] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:03:06.394] [ERROR] errors - getRolessql: select a.role_id,
-    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
-    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
-    from roles a
-[2024-07-14T23:03:06.394] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.roles' doesn't exist
-[2024-07-14T23:03:09.420] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/roles' and method='GET' 
-[2024-07-14T23:03:09.421] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:03:09.424] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T23:03:09.425] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T23:03:09.427] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 23:03:09',updated_at='2024-07-14 23:03:09' where id=undefined
-[2024-07-14T23:03:09.427] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:03:09.432] [ERROR] errors - getRolessql: select a.role_id,
-    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
-    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
-    from roles a
-[2024-07-14T23:03:09.432] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.roles' doesn't exist
-[2024-07-14T23:10:03.334] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/appointments' and method='GET' 
-[2024-07-14T23:10:03.334] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:10:03.336] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T23:10:03.336] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T23:10:03.339] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 23:10:03',updated_at='2024-07-14 23:10:03' where id=undefined
-[2024-07-14T23:10:03.339] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:10:05.591] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/users/users' and method='GET' 
-[2024-07-14T23:10:05.592] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:10:05.595] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T23:10:05.595] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T23:10:05.597] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 23:10:05',updated_at='2024-07-14 23:10:05' where id=undefined
-[2024-07-14T23:10:05.597] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:10:05.603] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/departments/departments' and method='GET' 
-[2024-07-14T23:10:05.603] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:10:05.609] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T23:10:05.609] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T23:10:05.611] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 23:10:05',updated_at='2024-07-14 23:10:05' where id=undefined
-[2024-07-14T23:10:05.611] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:10:05.616] [ERROR] errors - getDepartmentssql: select department_id as dep_id,name from departments where deleted_at is null
-[2024-07-14T23:10:05.616] [ERROR] errors - getDepartments: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.departments' doesn't exist
-[2024-07-14T23:10:05.635] [ERROR] errors - getDepartmentssql: select department_id as dep_id,name from departments where deleted_at is null
-[2024-07-14T23:10:05.636] [ERROR] errors - getDepartments: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.departments' doesn't exist
-[2024-07-14T23:10:18.996] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/appointments' and method='GET' 
-[2024-07-14T23:10:18.996] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:10:18.998] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T23:10:18.999] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T23:10:19.000] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 23:10:18',updated_at='2024-07-14 23:10:18' where id=undefined
-[2024-07-14T23:10:19.000] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:45:07.335] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/appointments' and method='GET' 
-[2024-07-14T23:45:07.336] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-14T23:45:07.338] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-14T23:45:07.338] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-14T23:45:07.340] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-14 23:45:07',updated_at='2024-07-14 23:45:07' where id=undefined
-[2024-07-14T23:45:07.340] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-15T01:02:02.210] [ERROR] errors - handleCheckRecordExistssql: select * from url_hit_logs where user_id=1 and url='/roles' and method='GET' 
-[2024-07-15T01:02:02.213] [ERROR] errors - handleCheckRecordExists: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-15T01:02:02.217] [ERROR] errors - handleDeleteRecordsql: delete  from url_hit_logs where id in ()
-[2024-07-15T01:02:02.217] [ERROR] errors - handleDeleteRecord: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
-[2024-07-15T01:02:02.220] [ERROR] errors - handleUpdateRecordsql: update url_hit_logs set  count=NaN,created_at='2024-07-15 01:02:02',updated_at='2024-07-15 01:02:02' where id=undefined
-[2024-07-15T01:02:02.221] [ERROR] errors - handleUpdateRecord: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.url_hit_logs' doesn't exist
-[2024-07-15T01:02:02.227] [ERROR] errors - getRolessql: select a.role_id,
-    if(task_type_id is null,a.name,(concat("VIEW: ",(select b.name from task_type b where b.task_type_id=a.task_type_id))))  as name,
-    if(task_type_id is null,null,(select b.name from task_type b where b.task_type_id=a.task_type_id))  as task_type_name
-    from roles a
-[2024-07-15T01:02:02.228] [ERROR] errors - getRoles: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.roles' doesn't exist
-[2024-07-16T18:32:56.413] [ERROR] errors - getNotificationssql: 
-    SELECT 
-    a.task_id,
-    a.mission_id,
-    a.submission_id,
-    a.log_type_id,
-    a.note,
-    a.name,
-    a.created_at,
-    a.activity_id,
-    users.name as  user,
-    a.user_id,
-    notifications.viewed_at
-
-    FROM activities a
-    left join tasks c on c.task_id=a.task_id
-    left join users on users.user_id = a.user_id
-    left join leave_requests on leave_requests.id=a.leave_request_id
-    left join user_overtimes on user_overtimes.id=a.user_overtime_id
-    left join notifications on notifications.activity_id = a.activity_id and notifications.user_id = 7
-
-    where (
-      ( 
-        ( a.log_type_id IN (30,31,32,33) and (true) and a.mission_id in (SELECT mission_id from sub_missions where sub_missions.eng_id = 7) ) or false
-      )
-      or 
-      ( 
-        ( 
-          a.log_type_id IN (35,36,37)  and (
-              a.leave_request_id is not null and 
-              (
-                ( 
-                  (
-                    a.log_type_id=35 and
-                    a.user_id != 7 and
-                    users.department_id  in (0)
-                  ) 
-                  or 
-                  (
-                    leave_requests.leave_request_status_id is  null and
-                    leave_requests.user_id=7 and
-                    users.department_id  in (0)
-                  )
-                )
-                or 
-                ( 
-                  (
-                    leave_requests.leave_request_status_id is not null and
-                    a.user_id != 7 and
-                    leave_requests.user_id=7
-                  )
-                  or
-                  (
-                    leave_requests.leave_request_status_id is not null and
-                    leave_requests.user_id=7 and
-                    users.department_id  in (0)
-                  )
-                )
-              ) 
-            ) 
-        ) or false  
-      )
-      or 
-      ( 
-        (
-          a.log_type_id IN (38,39,40)  and (
-            a.user_overtime_id is not null and
-             (
-              ( 
-                (
-                  a.log_type_id=38 and
-                  a.user_id != 7 and
-                  users.department_id  in (0)
-                )
-                or
-                (
-                  user_overtimes.user_overtime_status_id = 1 and
-                  user_overtimes.user_id=7 and
-                  users.department_id  in (0)
-                )
-              )
-              or 
-              ( 
-                (
-                  user_overtimes.user_overtime_status_id > 1 and
-                  a.user_id != 7 and
-                  user_overtimes.user_id=7
-                )
-                or
-                (
-                  user_overtimes.user_overtime_status_id > 1 and
-                  user_overtimes.user_id=7 and
-                  users.department_id  in (0)
-                )
-              )
-             ) 
-          ) 
-        ) or false  
-      )
-      or 
-      ( 
-        ( a.log_type_id IN (6) and false)
-      )
-     )
-      
-     order by created_at desc
-    LIMIT 5;
-    
-[2024-07-16T18:32:56.424] [ERROR] errors - getNotifications: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.tasks' doesn't exist
+[2024-08-16T10:17:49.512] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     AND DATE(a.date) = '2024-08-09' AND u.name LIKE %"2024-08-09"% AND a.status_id = '2'
+[2024-08-16T10:17:49.513] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"2024-08-09"% AND a.status_id = '2'' at line 11
+[2024-08-16T10:18:04.832] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     AND DATE(a.date) = '2024-08-09' AND u.name LIKE %"2024-08-09"% AND a.status_id = 2
+[2024-08-16T10:18:04.833] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"2024-08-09"% AND a.status_id = 2' at line 11
+[2024-08-16T10:18:26.440] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     AND DATE(a.date) = '2024-08-09' AND u.name LIKE %"2024-08-09"% AND a.status_id = 2
+[2024-08-16T10:18:26.441] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"2024-08-09"% AND a.status_id = 2' at line 11
+[2024-08-16T10:18:50.453] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     AND DATE(a.date) = '2024-08-09' AND u.name LIKE %"cdscsdcsdcsdcsdc"% AND a.status_id = 2
+[2024-08-16T10:18:50.454] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"cdscsdcsdcsdcsdc"% AND a.status_id = 2' at line 11
