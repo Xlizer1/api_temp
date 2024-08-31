@@ -1566,3 +1566,41 @@
             a.deleted_at IS NULL
      AND DATE(a.date) = '2024-08-09' AND u.name LIKE %"cdscsdcsdcsdcsdc"% AND a.status_id = 2
 [2024-08-16T10:18:50.454] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"cdscsdcsdcsdcsdc"% AND a.status_id = 2' at line 11
+[2024-08-26T21:14:46.835] [ERROR] errors - getAppointmentssql: 
+        INSERT INTO
+            prescription (
+                patient_id,
+                prescription,
+                appointment_id,
+                created_by,
+                created_at
+            )
+        VALUES (
+            undefined,
+            "undefined",
+            undefined,
+            1,
+            NOW()
+        );
+    
+[2024-08-26T21:14:46.838] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'field list'
+[2024-08-29T18:32:08.623] [ERROR] errors - getAppointmentssql: 
+        INSERT INTO
+            appointments (
+                patient_id,
+                doc_id,
+                patient_condition,
+                date,
+                created_by,
+                created_at
+            )
+        VALUES (
+            3,
+            undefined,
+            "",
+            "2024-08-29 18:31:46",
+            1,
+            NOW()
+        );
+    
+[2024-08-29T18:32:08.625] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'field list'

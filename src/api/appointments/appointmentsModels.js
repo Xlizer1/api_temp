@@ -42,8 +42,6 @@ async function createAppointments(data, params, callBack) {
   const user_id = data?.user_id;
   const { patient_id, doc_id, condition, date } = params;
 
-  console.log(date);
-
   var sql = `
         INSERT INTO
             appointments (

@@ -1,57 +1,58 @@
 var executeQuery = require("../../helper/common").executeQuery;
 
-async function getAppointments(params, callBack) {
-  const { date, patient_name, doc_id, statuses_id } = params;
+async function getPrescription(params, callBack) {
+  const { patient_name, itemsPerPage, offset } = params;
 
-  var sql = `
+  let selectTotal = `SELECT count(*) as total_rows`;
+
+  var selectSql = `
           SELECT
               p.*,
               u.name,
               u.birthdate as age
+  `;
+  var sql = `
           FROM
               prescription p
           LEFT JOIN
-              users u on u.user_id = a.patient_id
-          WHERE 
-              a.deleted_at IS NULL
+              users u on u.user_id = p.patient_id
       `;
-
-  if (date) {
-    sql += ` AND DATE(a.date) = '${date}'`;
-  }
 
   if (patient_name) {
     sql += ` AND u.name LIKE "%${patient_name}%"`;
   }
 
-  // if (doc_id) {
-  //   sql += ` AND DATE(a.date) = '${date}'`;
-  // }
-
-  if (statuses_id) {
-    sql += ` AND a.status_id = ${JSON.parse(statuses_id)}`;
-  }
-
-  executeQuery(sql, "getAppointments", (result) => {
-    if (result) callBack(result);
-    else callBack(false);
+  executeQuery(selectTotal + sql, "getPrescription", (resultTotal) => {
+    let totalRows = -1;
+    if (resultTotal && resultTotal.length) {
+      totalRows = resultTotal[0].total_rows;
+    }
+    let paginationSQL = ` ORDER BY p.created_at LIMIT ${offset * itemsPerPage}, ${itemsPerPage}`;
+    executeQuery(selectSql + sql + paginationSQL, "getPrescription", (result) => {
+      if (result) {
+        callBack({ total: totalRows, data: result });
+      } else callBack(false);
+    });
   });
 }
 
 async function createPrescription(data, params, callBack) {
-  const { patient_id, prescription } = params;
+  const user_id = data?.user_id;
+  const { patient_id, prescription, appointment_id } = params;
 
   var sql = `
         INSERT INTO
-            appointments (
+            prescription (
                 patient_id,
                 prescription,
+                appointment_id,
                 created_by,
                 created_at
             )
         VALUES (
             ${patient_id},
             "${prescription}",
+            ${appointment_id},
             ${user_id},
             NOW()
         );
@@ -62,4 +63,4 @@ async function createPrescription(data, params, callBack) {
   });
 }
 
-module.exports = { createPrescription };
+module.exports = { getPrescription, createPrescription };

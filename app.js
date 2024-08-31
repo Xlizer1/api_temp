@@ -17,6 +17,7 @@ const userGroupRoutes = require("./src/api/userGroups/userGroupRoutes.js");
 const updateContentRoutes = require("./src/api/updateContent/updateContentRoutes.js");
 
 const appointmentsRoutes = require("./src/api/appointments/appointmentsRoutes.js");
+const prescriptionRoutes = require("./src/api/prescription/prescriptionRoutes.js");
 
 const home = require("./src/helper/home");
 const handleRecordingUsersHit = require("./src/api/handleRecordingUsersHit.js");
@@ -45,6 +46,7 @@ app.use("/update_contents", updateContentRoutes);
 app.use("/appointments_statuses", appointmentsStatuses);
 
 app.use("/appointments", appointmentsRoutes);
+app.use("/prescription", prescriptionRoutes);
 
 app.use("/", home);
 

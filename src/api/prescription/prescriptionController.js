@@ -4,11 +4,11 @@ var auth = require("../../jwt/auth");
 const multer = require("../../helper/multer");
 var getRes = require("../../helper/common").getResponse;
 
-function getFinanceType(req, response) {
+function getPrescription(req, response) {
   auth.verify(req.headers["jwt"], (data) => {
     if (data) {
       if (data.roles_id.includes(5)) {
-        mod.getFinanceType((result) => {
+        mod.getPrescription(req.query, (result) => {
           if (result)
             response(getRes(true, { message: msg.inserted, data: result }));
           else response(getRes(false, null, msg.error));
@@ -22,7 +22,7 @@ function createPrescription(req, response) {
   auth.verify(req.headers["jwt"], (data) => {
     if (data) {
       if (data.roles_id.includes(5)) {
-        mod.createFinanceType(data, req, (result) => {
+        mod.createPrescription(data, req.body, (result) => {
           if (result)
             response(getRes(true, { message: msg.inserted, data: result }));
           else response(getRes(false, null, msg.error));
