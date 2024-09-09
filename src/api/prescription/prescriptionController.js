@@ -8,7 +8,7 @@ function getPrescription(req, response) {
   auth.verify(req.headers["jwt"], (data) => {
     if (data) {
       if (data.roles_id.includes(5)) {
-        mod.getPrescription(req.query, (result) => {
+        mod.getPrescription(data, req.query, (result) => {
           if (result)
             response(getRes(true, { message: msg.inserted, data: result }));
           else response(getRes(false, null, msg.error));
