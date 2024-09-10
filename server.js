@@ -36,6 +36,7 @@ io.on("connection", (socket) => {
 
   socket.on("send_mqtt_message", (data) => {
     const { topic, message } = data;
+    console.log(message)
     mqttClient.publish(topic, message);
   });
 

@@ -1,12 +1,10 @@
 var executeQuery = require("../../helper/common").executeQuery;
-const { sendPrescriptionCreateNotification } = require("../../config/pusher");
+const { sendPrescriptionCreateNotification, sendPrescriptionStatusChangeNotification, sendPrescriptionUpdateNotification } = require("../../config/pusher");
 
 async function getPrescription(data, params, callBack) {
   const user_id = data?.user_id;
   const user_department_id = data?.user_department_id;
   const { name, itemsPerPage, offset } = params;
-
-  console.log(itemsPerPage, offset);
 
   let selectTotal = `SELECT count(p.id) as total_rows`;
 
@@ -14,13 +12,16 @@ async function getPrescription(data, params, callBack) {
           SELECT
               p.*,
               u.name,
-              u.birthdate as age
+              u.birthdate AS age,
+              ps.name AS status
   `;
   var sql = `
           FROM
               prescription p
           LEFT JOIN
               users u on u.user_id = p.patient_id
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
   `;
 
   if (user_department_id === 5) {
@@ -28,7 +29,7 @@ async function getPrescription(data, params, callBack) {
   } else {
     sql += `
         WHERE
-            p.created_by = ${user_id}
+            p.created_by = ${user_id} OR p.patient_id = ${user_id}
     `;
   }
 
@@ -41,10 +42,8 @@ async function getPrescription(data, params, callBack) {
     if (resultTotal && resultTotal.length) {
       totalRows = resultTotal[0].total_rows;
     }
-    console.log(totalRows);
-    let paginationSQL = ` ORDER BY p.created_at DESC LIMIT ${
-      offset * itemsPerPage
-    }, ${itemsPerPage}`;
+    let paginationSQL = ` ORDER BY p.created_at DESC LIMIT ${offset * itemsPerPage
+      }, ${itemsPerPage}`;
     executeQuery(
       selectSql + sql + paginationSQL,
       "getPrescription",
@@ -79,7 +78,7 @@ async function createPrescription(data, params, callBack) {
   executeQuery(sql, "getAppointments", (result) => {
     if (result) {
       sendPrescriptionCreateNotification({
-        message: "New Prescription Created",
+        message: "New prescription created",
         name: data?.name,
       });
       callBack(true);
@@ -87,4 +86,47 @@ async function createPrescription(data, params, callBack) {
   });
 }
 
-module.exports = { getPrescription, createPrescription };
+async function updatePrescription(data, params, callBack) {
+  const { patient_id, prescription_id, prescription, pharmacist_note } = params;
+
+  var sql = `
+      UPDATE prescription
+      SET
+        patient_id = "${patient_id}",
+        prescription = "${prescription}",
+        note = "${pharmacist_note}"
+      WHERE
+        id = ${prescription_id}
+  `;
+
+  executeQuery(sql, "getAppointments", (result) => {
+    if (result) {
+      sendPrescriptionUpdateNotification({
+        message: "Updated prescription",
+        name: data?.name,
+      });
+      callBack(true);
+    } else callBack(false);
+  });
+}
+
+async function changePrescriptionStatus(data, params, callBack) {
+  const { prescription_id, status_id } = params;
+
+  var sql = `
+      UPDATE prescription SET status_id = ${status_id}
+      WHERE prescription.id = ${prescription_id}
+  `;
+
+  executeQuery(sql, "getAppointments", (result) => {
+    if (result) {
+      sendPrescriptionStatusChangeNotification({
+        message: "Updated prescription status",
+        name: data?.name,
+      });
+      callBack(true);
+    } else callBack(false);
+  });
+}
+
+module.exports = { getPrescription, createPrescription, updatePrescription, changePrescriptionStatus };

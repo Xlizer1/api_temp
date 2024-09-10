@@ -44,6 +44,7 @@ app.use("/groups", groupRoutes);
 app.use("/user_groups", userGroupRoutes);
 app.use("/update_contents", updateContentRoutes);
 app.use("/appointments_statuses", appointmentsStatuses);
+app.use("/prescription_statuses", appointmentsStatuses);
 
 app.use("/appointments", appointmentsRoutes);
 app.use("/prescription", prescriptionRoutes);

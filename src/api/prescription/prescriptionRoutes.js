@@ -14,16 +14,16 @@ router.post("/", (req, res) => {
   });
 });
 
-// router.put("/:finance_type_id", (req, res) => {
-//   financeTypeController.updateFinanceType(req, (response) => {
-//     res.json(response);
-//   });
-// });
+router.put("/", (req, res) => {
+  financeTypeController.updatePrescription(req, (response) => {
+    res.json(response);
+  });
+});
 
-// router.delete("/:finance_type_id", (req, res) => {
-//   financeTypeController.deleteFinanceType(req, (response) => {
-//     res.json(response);
-//   });
-// });
+router.put("/status", (req, res) => {
+  financeTypeController.changePrescriptionStatus(req, (response) => {
+    res.json(response);
+  });
+});
 
 module.exports = router;

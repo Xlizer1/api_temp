@@ -32,37 +32,37 @@ function createPrescription(req, response) {
   });
 }
 
-// function updateFinanceType(req, response) {
-//   auth.verify(req.headers["jwt"], (data) => {
-//     if (data) {
-//       if (data.roles_id.includes(5)) {
-//         mod.updateFinanceType(data, req, (result) => {
-//           if (result)
-//             response(getRes(true, { message: msg.inserted, data: result }));
-//           else response(getRes(false, null, msg.error));
-//         });
-//       } else response(getRes(false, null, msg.failedCreate));
-//     } else response(getRes(false, null, msg.invalidToken));
-//   });
-// }
+function updatePrescription(req, response) {
+  auth.verify(req.headers["jwt"], (data) => {
+    if (data) {
+      if (data.roles_id.includes(5)) {
+        mod.updatePrescription(data, req.body, (result) => {
+          if (result)
+            response(getRes(true, { message: msg.inserted, data: result }));
+          else response(getRes(false, null, msg.error));
+        });
+      } else response(getRes(false, null, msg.failedCreate));
+    } else response(getRes(false, null, msg.invalidToken));
+  });
+}
 
-// function deleteFinanceType(req, response) {
-//   auth.verify(req.headers["jwt"], (data) => {
-//     if (data) {
-//       if (data.roles_id.includes(5)) {
-//         mod.deleteFinanceType(data, req, (result) => {
-//           if (result)
-//             response(getRes(true, { message: msg.inserted, data: result }));
-//           else response(getRes(false, null, msg.error));
-//         });
-//       } else response(getRes(false, null, msg.failedCreate));
-//     } else response(getRes(false, null, msg.invalidToken));
-//   });
-// }
+function changePrescriptionStatus(req, response) {
+  auth.verify(req.headers["jwt"], (data) => {
+    if (data) {
+      if (data.roles_id.includes(5)) {
+        mod.changePrescriptionStatus(data, req.body, (result) => {
+          if (result)
+            response(getRes(true, { message: msg.inserted, data: result }));
+          else response(getRes(false, null, msg.error));
+        });
+      } else response(getRes(false, null, msg.failedCreate));
+    } else response(getRes(false, null, msg.invalidToken));
+  });
+}
 
 module.exports = {
   getPrescription,
   createPrescription,
-  // updateFinanceType,
-  // deleteFinanceType,
+  updatePrescription,
+  changePrescriptionStatus
 };
