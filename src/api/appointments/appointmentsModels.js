@@ -76,8 +76,8 @@ async function updateAppointments(data, params, callBack) {
         SET
             patient_id = ${patient_id},
             doc_id = ${doc_id},
-            patient_condition = ${condition},
-            date = ${date},
+            patient_condition = "${condition}",
+            date = "${date}",
             updated_by = ${user_id},
             updated_at = NOW()
         WHERE

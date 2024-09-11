@@ -1,5 +1,9 @@
 var executeQuery = require("../../helper/common").executeQuery;
-const { sendPrescriptionCreateNotification, sendPrescriptionStatusChangeNotification, sendPrescriptionUpdateNotification } = require("../../config/pusher");
+const {
+  sendPrescriptionCreateNotification,
+  sendPrescriptionStatusChangeNotification,
+  sendPrescriptionUpdateNotification,
+} = require("../../config/pusher");
 
 async function getPrescription(data, params, callBack) {
   const user_id = data?.user_id;
@@ -12,6 +16,7 @@ async function getPrescription(data, params, callBack) {
           SELECT
               p.*,
               u.name,
+              doc.name AS doc_name,
               u.birthdate AS age,
               ps.name AS status
   `;
@@ -20,6 +25,8 @@ async function getPrescription(data, params, callBack) {
               prescription p
           LEFT JOIN
               users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
           LEFT JOIN
               prescription_statuses ps on ps.id = p.status_id
   `;
@@ -42,8 +49,9 @@ async function getPrescription(data, params, callBack) {
     if (resultTotal && resultTotal.length) {
       totalRows = resultTotal[0].total_rows;
     }
-    let paginationSQL = ` ORDER BY p.created_at DESC LIMIT ${offset * itemsPerPage
-      }, ${itemsPerPage}`;
+    let paginationSQL = ` ORDER BY p.created_at DESC LIMIT ${
+      offset * itemsPerPage
+    }, ${itemsPerPage}`;
     executeQuery(
       selectSql + sql + paginationSQL,
       "getPrescription",
@@ -129,4 +137,9 @@ async function changePrescriptionStatus(data, params, callBack) {
   });
 }
 
-module.exports = { getPrescription, createPrescription, updatePrescription, changePrescriptionStatus };
+module.exports = {
+  getPrescription,
+  createPrescription,
+  updatePrescription,
+  changePrescriptionStatus,
+};
