@@ -1,7 +1,6 @@
 const executeQuery = require("../../helper/common").executeQuery;
 const { sendAppointmentCreateNotification } = require("../../config/pusher");
 const axios = require("axios");
-const twilio = require("twilio");
 
 async function getAppointments(params, callBack) {
   const { date, patient_name, doc_id, statuses_id } = params;
