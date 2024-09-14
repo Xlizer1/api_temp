@@ -54,17 +54,6 @@ async function createAppointments(data, params, callBack) {
     return;
   }
 
-  const client = new twilio(accountSid, authToken);
-
-  client.messages
-    .create({
-      body: "ها هلو",
-      to: "+9647733002075", // Replace with your phone number (must be verified in Twilio)
-      from: "+0987654321", // Replace with your Twilio number
-    })
-    .then((message) => console.log("Message sent successfully: " + message.sid))
-    .catch((error) => console.log("Error sending message: ", error));
-
   var sql = `
         INSERT INTO
             appointments (
