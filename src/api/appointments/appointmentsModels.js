@@ -3,9 +3,6 @@ const { sendAppointmentCreateNotification } = require("../../config/pusher");
 const axios = require("axios");
 const twilio = require("twilio");
 
-const accountSid = "AC0f38fd5c9f9ec7f6a2e33947c57767d9"; // Replace with your Account SID
-const authToken = "54939d4c9d04b48a74e4c12658e1ac8b"; // Replace with your Auth Token
-
 async function getAppointments(params, callBack) {
   const { date, patient_name, doc_id, statuses_id } = params;
 
