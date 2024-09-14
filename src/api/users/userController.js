@@ -17,7 +17,7 @@ function createUsers(req, response) {
           email: req.body.email,
           depId: req.body.department_id,
           phone: req.body.phone,
-          ip_phone: req.body.ip_phone,
+          patients_per_day: req.body.patients_per_day,
           birthdate: req.body.birthdate,
           telegram_username: req.body.telegram_username,
           default_route: req.body.default_route,
@@ -27,7 +27,6 @@ function createUsers(req, response) {
           is_group_base_role: req?.body?.is_group_base_role
             ? req.body.is_group_base_role
             : 0,
-          telegram_id: req?.body?.telegram_id ? req?.body?.telegram_id : null,
         };
         //check if username existed
         mod.checkUsernameOrIdExisting(user.username, null, (existed) => {

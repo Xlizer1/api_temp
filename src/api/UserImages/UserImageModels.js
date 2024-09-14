@@ -59,9 +59,14 @@ function getUserImagesList(searchFields, callback) {
 function createUserImage(searchFields, callback) {
   var file = searchFields.file;
   var user_id = searchFields.user_id;
-  var ext = file.originalname.substring(file.originalname.lastIndexOf(".") + 1);
+  var patients_per_day = file.originalname.substring(
+    file.originalname.lastIndexOf(".") + 1
+  );
 
-  var fileName = `${user_id}__${getDateTime(null, "ymd_HMN")}.${ext}`;
+  var fileName = `${user_id}__${getDateTime(
+    null,
+    "ymd_HMN"
+  )}.${patients_per_day}`;
 
   const userImageDate = new Date();
   const year = userImageDate.getFullYear();
@@ -195,5 +200,5 @@ module.exports = {
   updateUserImage,
   deletedUserImage,
   getUserImages,
-  getUserImagesList
+  getUserImagesList,
 };

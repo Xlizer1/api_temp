@@ -1835,3 +1835,56 @@
             id = 21;
     
 [2024-09-12T00:05:45.092] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'cdscsdcsdc' in 'field list'
+[2024-09-14T21:07:59.415] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=4
+[2024-09-14T21:07:59.416] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T21:16:24.725] [ERROR] errors - updateUserDetailssql: BEGIN;
+        update users set name= "Mustafa Eltoum",email="mustafa.t@is.iq", department_id=department_id,phone="9647823741400",ip_phone="20"
+        ,birthdate="2001-04-24", telegram_username=telegram_username, default_route=default_route, updated_at="2024-09-14 21:16:24" , allow_send_email=0,is_group_base_role=0,telegram_id=null where user_id=1;
+        INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+            VALUES(1, 1, 2,'{"name":"Mustafa Eltoum","email":"mustafa.t@is.iq","phone":"9647823741400","ip_phone":"20","birthdate":"2001-04-24"}', '2024-09-14 21:16:24');
+        COMMIT;
+[2024-09-14T21:16:24.725] [ERROR] errors - updateUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'telegram_username' in 'field list'
+[2024-09-14T21:17:19.428] [ERROR] errors - updateUserDetailssql: BEGIN;
+        update users set name= "Mustafa Eltoum",email="mustafa.t@is.iq", department_id=department_id,phone="9647823741400",ip_phone="20"
+        ,birthdate="2001-04-24", default_route=default_route, updated_at="2024-09-14 21:17:19" , allow_send_email=0,is_group_base_role=0,telegram_id=null where user_id=1;
+        INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+            VALUES(1, 1, 2,'{"name":"Mustafa Eltoum","email":"mustafa.t@is.iq","phone":"9647823741400","ip_phone":"20","birthdate":"2001-04-24"}', '2024-09-14 21:17:19');
+        COMMIT;
+[2024-09-14T21:17:19.429] [ERROR] errors - updateUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'telegram_id' in 'field list'
+[2024-09-14T21:17:44.904] [ERROR] errors - updateUserDetailssql: BEGIN;
+        update users set name= "Mustafa Eltoum",email="mustafa.t@is.iq", department_id=department_id,phone="9647823741400",ip_phone="20"
+        ,birthdate="2001-04-24", default_route=default_route, updated_at="2024-09-14 21:17:44" , allow_send_email=0,is_group_base_role=0, where user_id=1;
+        INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
+            VALUES(1, 1, 2,'{"name":"Mustafa Eltoum","email":"mustafa.t@is.iq","phone":"9647823741400","ip_phone":"20","birthdate":"2001-04-24"}', '2024-09-14 21:17:44');
+        COMMIT;
+[2024-09-14T21:17:44.905] [ERROR] errors - updateUserDetails: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where user_id=1;
+        INSERT INTO activities (user_id,user_id_affected,log_ty' at line 2
+[2024-09-14T21:36:07.365] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=4
+[2024-09-14T21:36:07.366] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T21:36:09.768] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=4
+[2024-09-14T21:36:09.768] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T21:36:09.769] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=3
+[2024-09-14T21:36:09.770] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T22:03:53.140] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=4
+[2024-09-14T22:03:53.141] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T22:04:02.608] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=3
+[2024-09-14T22:04:02.608] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T22:04:02.610] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=4
+[2024-09-14T22:04:02.610] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T22:04:34.874] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=4
+[2024-09-14T22:04:34.874] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T22:05:05.564] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=3
+[2024-09-14T22:05:05.565] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T22:05:05.565] [ERROR] errors - getUsersListsql: select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role,a.telegram_id from users a  where a.deleted_at is null  AND department_id <> 12 AND department_id=4
+[2024-09-14T22:05:05.566] [ERROR] errors - getUsersList: Error: ER_BAD_FIELD_ERROR: Unknown column 'a.telegram_id' in 'field list'
+[2024-09-14T22:13:43.274] [ERROR] errors - getAppointmentssql: 
+      SELECT
+          COUNT(a.id) AS patients_count
+      FROM
+          appointments a
+      WHERE
+          a.date BETWEEN "undefined 00:00:00" AND "undefined 23:59:59"
+      AND
+          a.doc_id = undefined
+    
+[2024-09-14T22:13:43.276] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'

@@ -36,8 +36,18 @@ const sendPrescriptionStatusChangeNotification = (notificationObject) => {
   });
 };
 
+const sendAppointmentCreateNotification = (notificationObject) => {
+  const channelName = `appointments_notification`;
+  const eventName = "appointments_create";
+  pusher.trigger(channelName, eventName, {
+    ...notificationObject,
+    channelBrodcast: 4,
+  });
+};
+
 module.exports = {
   sendPrescriptionCreateNotification,
   sendPrescriptionUpdateNotification,
   sendPrescriptionStatusChangeNotification,
+  sendAppointmentCreateNotification,
 };
