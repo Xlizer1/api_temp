@@ -1888,3 +1888,181 @@
           a.doc_id = undefined
     
 [2024-09-14T22:13:43.276] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-09-15T11:41:02.688] [ERROR] errors - patientsPerDaysql: 
+          SELECT
+              u.patients_per_day
+          FROM
+              users u
+          WHERE
+              u.user_id = 5
+        
+[2024-09-15T11:41:02.690] [ERROR] errors - patientsPerDay: Error: ER_BAD_FIELD_ERROR: Unknown column 'u.patients_per_day' in 'field list'
+[2024-09-15T14:18:28.062] [ERROR] errors - getAppointmentRequestssql: SELECT count(p.id) as total_rows
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+  
+[2024-09-15T14:18:28.064] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.id' in 'field list'
+[2024-09-15T14:18:28.067] [ERROR] errors - getAppointmentRequestssql: 
+          SELECT
+              p.*,
+              u.name,
+              ars.id as status_id,
+              ars.name as status
+  
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+   ORDER BY p.created_at DESC LIMIT 0, 20
+[2024-09-15T14:18:28.068] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_TABLE_ERROR: Unknown table 'p'
+[2024-09-15T14:18:28.092] [ERROR] errors - getAppointmentRequestssql: SELECT count(p.id) as total_rows
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+  
+[2024-09-15T14:18:28.093] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.id' in 'field list'
+[2024-09-15T14:18:28.094] [ERROR] errors - getAppointmentRequestssql: 
+          SELECT
+              p.*,
+              u.name,
+              ars.id as status_id,
+              ars.name as status
+  
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+   ORDER BY p.created_at DESC LIMIT 0, 20
+[2024-09-15T14:18:28.095] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_TABLE_ERROR: Unknown table 'p'
+[2024-09-15T14:19:07.954] [ERROR] errors - getAppointmentRequestssql: SELECT count(p.id) as total_rows
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+  
+[2024-09-15T14:19:07.956] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.id' in 'field list'
+[2024-09-15T14:19:07.958] [ERROR] errors - getAppointmentRequestssql: 
+          SELECT
+              ar.*,
+              u.name,
+              ars.id as status_id,
+              ars.name as status
+  
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+   ORDER BY p.created_at DESC LIMIT 0, 20
+[2024-09-15T14:19:07.959] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.created_at' in 'order clause'
+[2024-09-15T14:19:32.922] [ERROR] errors - getAppointmentRequestssql: SELECT count(p.id) as total_rows
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+  
+[2024-09-15T14:19:32.923] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.id' in 'field list'
+[2024-09-15T14:27:25.050] [ERROR] errors - getAppointmentRequestssql: SELECT count(p.id) as total_rows
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+  
+[2024-09-15T14:27:25.051] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.id' in 'field list'
+[2024-09-15T14:27:25.070] [ERROR] errors - getAppointmentRequestssql: SELECT count(p.id) as total_rows
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+  
+[2024-09-15T14:27:25.071] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.id' in 'field list'
+[2024-09-15T14:27:34.004] [ERROR] errors - getAppointmentRequestssql: SELECT count(p.id) as total_rows
+          FROM
+              appointments_requests ar
+          LEFT JOIN
+              users u on u.user_id = ar.created_by
+          LEFT JOIN
+              appointments_requests_statuses ars on ars.id = ar.status_id
+          WHERE
+              ar.created_by = 7
+  
+[2024-09-15T14:27:34.005] [ERROR] errors - getAppointmentRequests: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.id' in 'field list'
+[2024-09-15T16:00:49.510] [ERROR] errors - getAppointmentssql: 
+      DELETE appointments_requests
+      WHERE
+        id = 1
+  
+[2024-09-15T16:00:49.512] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+        id = 1' at line 2
+[2024-09-15T16:34:23.580] [ERROR] errors - getAppointmentssql: 
+      UPDATE appointments_requests SET status_id = 2, approval_note = يلا روح عادي
+      WHERE appointments_requests.id = 2
+  
+[2024-09-15T16:34:23.582] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'روح عادي
+      WHERE appointments_requests.id = 2' at line 1
+[2024-09-15T17:07:04.825] [ERROR] errors - getAppointmentssql: 
+      UPDATE prescription SET status_id = 2
+      WHERE prescription.id = [object Object]
+  
+[2024-09-15T17:07:04.827] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object]' at line 2
+[2024-09-15T17:07:28.314] [ERROR] errors - getAppointmentssql: 
+      UPDATE prescription SET status_id = 3
+      WHERE prescription.id = [object Object]
+  
+[2024-09-15T17:07:28.315] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object]' at line 2
+[2024-09-15T17:09:29.706] [ERROR] errors - getAppointmentssql: 
+      UPDATE prescription SET status_id = 2
+      WHERE prescription.id = [object Object]
+  
+[2024-09-15T17:09:29.707] [ERROR] errors - getAppointments: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object]' at line 2
+[2024-09-15T19:02:49.672] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+     AND DATE(a.date) = '2024-09-15' AND DATE(a.date) = '11'
+[2024-09-15T19:02:49.673] [ERROR] errors - getAppointments: Error: ER_WRONG_VALUE: Incorrect DATE value: '11'
