@@ -7,7 +7,7 @@ async function getAppointments(req, response) {
     if (data) {
       if (data.roles_id.includes(5)) {
         const params = req.query;
-        mod.getAppointments(params, (result) => {
+        mod.getAppointments(data, params, (result) => {
           if (result) response(getRes(true, result));
           else response(getRes(false, null, msg.error));
         });

@@ -1,8 +1,8 @@
 const executeQuery = require("../../helper/common").executeQuery;
 const { sendAppointmentCreateNotification } = require("../../config/pusher");
-const axios = require("axios");
 
-async function getAppointments(params, callBack) {
+async function getAppointments(data, params, callBack) {
+  const { user_id, user_department_id } = data;
   const { date, patient_name, doc_id, statuses_id } = params;
 
   var sql = `
@@ -26,9 +26,13 @@ async function getAppointments(params, callBack) {
     sql += ` AND u.name LIKE "%${patient_name}%"`;
   }
 
-  // if (doc_id) {
-  //   sql += ` AND DATE(a.date) = '${date}'`;
-  // }
+  if(user_department_id === 4) {
+    sql += ` AND a.doc_id = '${user_id}'`;
+  }
+
+  if (doc_id) {
+    sql += ` AND a.doc_id = '${doc_id}'`;
+  }
 
   if (statuses_id) {
     sql += ` AND a.status_id = ${JSON.parse(statuses_id)}`;
@@ -54,24 +58,24 @@ async function createAppointments(data, params, callBack) {
   }
 
   var sql = `
-        INSERT INTO
-            appointments (
-                patient_id,
-                doc_id,
-                patient_condition,
-                date,
-                created_by,
-                created_at
-            )
-        VALUES (
-            ${patient_id},
-            ${doc_id},
-            "${condition}",
-            "${date}",
-            ${user_id},
-            NOW()
-        );
-    `;
+      INSERT INTO
+          appointments (
+              patient_id,
+              doc_id,
+              patient_condition,
+              date,
+              created_by,
+              created_at
+          )
+      VALUES (
+          ${patient_id},
+          ${doc_id},
+          "${condition}",
+          "${date}",
+          ${user_id},
+          NOW()
+      );
+  `;
   executeQuery(sql, "getAppointments", (result) => {
     if (result) {
       sendAppointmentCreateNotification({
