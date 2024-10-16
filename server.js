@@ -51,6 +51,24 @@ mqttClient.on("message", (topic, message) => {
   io.emit("mqtt_message", { topic, message: message.toString() });
 });
 
+function generateSensorData() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  const temperature = "28.39 C";
+  const heartRate = "0 bpm";
+  const spo2 = "0 %";
+  const sensorData = `start time: ${timeString} Temperature: ${temperature}, Heart Rate: ${heartRate}, SpO2: ${spo2}`;
+  return sensorData;
+}
+
+setInterval(() => {
+  const topic = "sensor/data"; // Replace with the actual topic if needed
+  io.emit("mqtt_message", { topic, message: generateSensorData() });
+}, 5000); // 5000 milliseconds = 5 seconds
+
 io.on("connection", (socket) => {
   console.log("Client connected");
 

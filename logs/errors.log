@@ -2066,3 +2066,112 @@
             a.deleted_at IS NULL
      AND DATE(a.date) = '2024-09-15' AND DATE(a.date) = '11'
 [2024-09-15T19:02:49.673] [ERROR] errors - getAppointments: Error: ER_WRONG_VALUE: Incorrect DATE value: '11'
+[2024-10-17T00:24:38.774] [ERROR] errors - getNotificationssql: 
+    SELECT 
+    a.task_id,
+    a.mission_id,
+    a.submission_id,
+    a.log_type_id,
+    a.note,
+    a.name,
+    a.created_at,
+    a.activity_id,
+    users.name as  user,
+    a.user_id,
+    notifications.viewed_at
+
+    FROM activities a
+    left join tasks c on c.task_id=a.task_id
+    left join users on users.user_id = a.user_id
+    left join leave_requests on leave_requests.id=a.leave_request_id
+    left join user_overtimes on user_overtimes.id=a.user_overtime_id
+    left join notifications on notifications.activity_id = a.activity_id and notifications.user_id = 10
+
+    where (
+      ( 
+        ( a.log_type_id IN (30,31,32,33) and (false) and a.mission_id in (SELECT mission_id from sub_missions where sub_missions.eng_id = 10) ) or false
+      )
+      or 
+      ( 
+        ( 
+          a.log_type_id IN (35,36,37)  and (
+              a.leave_request_id is not null and 
+              (
+                ( 
+                  (
+                    a.log_type_id=35 and
+                    a.user_id != 10 and
+                    users.department_id  in (2,3,6,8,12)
+                  ) 
+                  or 
+                  (
+                    leave_requests.leave_request_status_id is  null and
+                    leave_requests.user_id=10 and
+                    users.department_id  in (2,3,6,8,12)
+                  )
+                )
+                or 
+                ( 
+                  (
+                    leave_requests.leave_request_status_id is not null and
+                    a.user_id != 10 and
+                    leave_requests.user_id=10
+                  )
+                  or
+                  (
+                    leave_requests.leave_request_status_id is not null and
+                    leave_requests.user_id=10 and
+                    users.department_id  in (2,3,6,8,12)
+                  )
+                )
+              ) 
+            ) 
+        ) or false  
+      )
+      or 
+      ( 
+        (
+          a.log_type_id IN (38,39,40)  and (
+            a.user_overtime_id is not null and
+             (
+              ( 
+                (
+                  a.log_type_id=38 and
+                  a.user_id != 10 and
+                  users.department_id  in (2,3,6,8,12)
+                )
+                or
+                (
+                  user_overtimes.user_overtime_status_id = 1 and
+                  user_overtimes.user_id=10 and
+                  users.department_id  in (2,3,6,8,12)
+                )
+              )
+              or 
+              ( 
+                (
+                  user_overtimes.user_overtime_status_id > 1 and
+                  a.user_id != 10 and
+                  user_overtimes.user_id=10
+                )
+                or
+                (
+                  user_overtimes.user_overtime_status_id > 1 and
+                  user_overtimes.user_id=10 and
+                  users.department_id  in (2,3,6,8,12)
+                )
+              )
+             ) 
+          ) 
+        ) or false  
+      )
+      or 
+      ( 
+        ( a.log_type_id IN (6) and true)
+      )
+     )
+      
+     order by created_at desc
+    LIMIT 5;
+    
+[2024-10-17T00:24:38.776] [ERROR] errors - getNotifications: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.tasks' doesn't exist
