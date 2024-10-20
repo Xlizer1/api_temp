@@ -55,9 +55,42 @@ async function getPrescription(data, params, callBack) {
     executeQuery(
       selectSql + sql + paginationSQL,
       "getPrescription",
-      (result) => {
+      async (result) => {
         if (result) {
-          callBack({ total: totalRows, data: result });
+          const updatedResult = await Promise.all(
+            result.map(async (prescription) => {
+              const sqlRequestFinances = `
+                SELECT 
+                    *
+                FROM
+                    prescription_details
+                WHERE
+                    p_id = ${prescription.id}
+              `;
+
+              let requestFinancesResult = await new Promise((resolve) => {
+                executeQuery(
+                  sqlRequestFinances,
+                  "getTaskStatus",
+                  (prescriptionDetails) => {
+                    if (prescriptionDetails.length && prescriptionDetails[0]) {
+                      resolve(prescriptionDetails);
+                    } else {
+                      resolve([]);
+                    }
+                  }
+                );
+              });
+
+              return {
+                ...prescription,
+                arr: requestFinancesResult,
+              };
+            })
+          );
+
+          // Once all asynchronous operations are done, call the callback
+          callBack({ total: totalRows, data: updatedResult });
         } else callBack(false);
       }
     );
@@ -89,7 +122,7 @@ async function createPrescription(data, params, callBack) {
         message: "New prescription created",
         name: data?.name,
       });
-      callBack(true);
+      callBack(result?.insertId);
     } else callBack(false);
   });
 }
@@ -137,9 +170,98 @@ async function changePrescriptionStatus(data, params, callBack) {
   });
 }
 
+async function insertTaskFinances(data, p_id, prescription_details, callback) {
+  if (p_id && prescription_details && prescription_details?.length) {
+    var detailsInsertedSuccessfully = true;
+    for (let i = 0; i < prescription_details.length; i++) {
+      const prescription_detail = prescription_details[i];
+      let medicine_name = prescription_detail?.medicine_name
+        ? prescription_detail?.medicine_name
+        : "";
+      let dose = prescription_detail?.dose ? prescription_detail?.dose : 0;
+      let note = prescription_detail?.note ? prescription_detail?.note : "";
+      let provided = prescription_detail?.provided ? 1 : 0;
+      let sql = `
+              INSERT INTO
+                  prescription_details (
+                      p_id,
+                      medicine_name,
+                      dose,
+                      note,
+                      provided
+                  )
+              VALUES (
+                  ${p_id},
+                  ${medicine_name},
+                  ${dose},
+                  "${note}",
+                  ${provided}
+              )
+          `;
+      executeQuery(sql, "insertTaskDetails #" + p_id, (result) => {
+        if (result[0] === false) detailsInsertedSuccessfully = false;
+      });
+    }
+    if (detailsInsertedSuccessfully) callback(true);
+    else callback(false);
+  } else {
+    callback(false);
+  }
+}
+
+async function updateTaskFinances(data, p_id, prescription_details, callback) {
+  let removeOldDetailsSql = `
+          DELETE FROM prescription_details WHERE p_id = ${p_id}
+      `;
+  executeQuery(
+    removeOldDetailsSql,
+    "removeOldDetailsSql #" + p_id,
+    (res) => res
+  );
+
+  if (p_id && prescription_details && prescription_details?.length) {
+    var detailsInsertedSuccessfully = true;
+    for (let i = 0; i < prescription_details.length; i++) {
+      const prescription_detail = prescription_details[i];
+      let medicine_name = prescription_detail?.medicine_name
+        ? prescription_detail?.medicine_name
+        : "";
+      let dose = prescription_detail?.dose ? prescription_detail?.dose : 0;
+      let note = prescription_detail?.note ? prescription_detail?.note : "";
+      let provided = prescription_detail?.provided ? 1 : 0;
+      let sql = `
+              INSERT INTO
+                  prescription_details (
+                      p_id,
+                      medicine_name,
+                      dose,
+                      note,
+                      provided
+                  )
+              VALUES (
+                  ${p_id},
+                  "${medicine_name}",
+                  ${dose},
+                  "${note}",
+                  ${provided}
+              )
+          `;
+      executeQuery(sql, "insertTaskDetails #" + p_id, (result) => {
+        if (result[0] === false) detailsInsertedSuccessfully = false;
+      });
+    }
+    if (detailsInsertedSuccessfully) callback(true);
+    else callback(false);
+  } else {
+    callback(false);
+  }
+}
+
 module.exports = {
   getPrescription,
   createPrescription,
   updatePrescription,
   changePrescriptionStatus,
+  insertTaskFinances,
+  updateTaskFinances,
 };

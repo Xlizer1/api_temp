@@ -26,4 +26,16 @@ router.put("/status", (req, res) => {
   });
 });
 
+router.post("/prescription_details/:id", (req, res) => {
+  financeTypeController.insertTaskFinances(req, (response) => {
+    res.json(response);
+  });
+});
+
+router.put("/prescription_details/:id", (req, res) => {
+  financeTypeController.updateTaskFinances(req, (response) => {
+    res.json(response);
+  });
+});
+
 module.exports = router;

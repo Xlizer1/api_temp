@@ -2175,3 +2175,1888 @@
     LIMIT 5;
     
 [2024-10-17T00:24:38.776] [ERROR] errors - getNotifications: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.tasks' doesn't exist
+[2024-10-19T16:30:56.563] [ERROR] errors - insertTaskDetails #50sql: 
+              INSERT INTO
+                  prescription_details (
+                      p_id,
+                      medicine_name,
+                      dose,
+                      note,
+                      provided
+                  )
+              VALUES (
+                  50,
+                  jcds,
+                  4,
+                  "dce",
+                  1
+              )
+          
+[2024-10-19T16:30:56.567] [ERROR] errors - insertTaskDetails #50: Error: ER_BAD_FIELD_ERROR: Unknown column 'jcds' in 'field list'
+[2024-10-19T17:08:04.297] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:04.298] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:04.301] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:04.301] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:09.300] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:09.302] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:09.303] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:09.304] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:14.307] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:14.308] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:14.310] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:14.310] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:19.320] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:19.320] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:19.322] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:19.322] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:24.325] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:24.326] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:24.327] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:24.328] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:29.336] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:29.336] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:29.338] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:29.338] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:34.344] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:34.345] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:34.346] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:34.347] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:39.348] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:39.349] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:39.351] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:39.351] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:44.357] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:44.358] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:44.361] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:44.362] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:49.362] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:49.362] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:49.364] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:49.364] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:54.375] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:54.376] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:54.378] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:54.379] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:59.381] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:59.381] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:08:59.383] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:08:59.384] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:04.394] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:04.395] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:04.396] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:04.397] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:09.408] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:09.409] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:09.411] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:09.411] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:14.419] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:14.420] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:14.421] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:14.422] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:19.422] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:19.423] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:19.424] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:19.425] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:24.429] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:24.430] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:24.431] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:24.432] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:29.438] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:29.438] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:29.440] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:29.441] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:34.448] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:34.448] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:34.450] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:34.450] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:39.459] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:39.459] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:39.461] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:39.461] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:44.465] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:44.466] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:44.467] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:44.468] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:49.474] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:49.475] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:49.477] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:49.477] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:54.487] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:54.487] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:09:54.489] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39 C,
+        undefined,
+        0 %,
+        "NOW()",
+        1
+  
+[2024-10-19T17:09:54.489] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C,
+        undefined,
+        0 %,
+        "NOW()",
+        1' at line 10
+[2024-10-19T17:10:05.059] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        undefined,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:05.060] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:10.067] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        undefined,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:10.068] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:15.078] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        undefined,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:15.079] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:20.086] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        undefined,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:20.086] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:29.100] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:29.101] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:34.104] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:34.106] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:39.109] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:39.110] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:44.118] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:44.118] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:49.129] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:49.130] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:54.135] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:54.136] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:10:59.140] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:10:59.141] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:04.152] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:04.153] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:09.160] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:09.161] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:18.613] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:18.615] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:23.614] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:23.616] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:28.622] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:28.624] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:33.624] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:33.626] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:38.637] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:38.638] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:43.643] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:43.644] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:48.651] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:48.652] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:53.658] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:53.658] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:11:58.662] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:11:58.663] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:03.671] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:12:03.672] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:08.682] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:12:08.682] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:13.687] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        "NOW()",
+        1
+  
+[2024-10-19T17:12:13.687] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:23.528] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:12:23.529] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:28.524] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:12:28.525] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:33.526] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:12:33.527] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:38.540] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:12:38.541] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:43.550] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:12:43.551] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:48.560] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:12:48.560] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:53.572] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:12:53.573] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:12:58.583] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:12:58.584] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:03.591] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:03.592] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:08.594] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:08.595] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:13.606] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:13.607] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:18.617] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:18.617] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:23.616] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:23.617] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:36.482] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:36.483] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:41.492] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:41.494] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:46.495] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:46.496] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:51.503] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:51.504] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:13:56.513] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:13:56.514] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:01.520] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:01.520] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:06.525] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:06.526] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:11.527] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:11.527] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:16.528] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:16.529] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:21.538] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:21.539] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:26.545] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:26.546] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:31.553] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:31.553] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:36.564] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:36.565] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:41.569] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:41.570] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-19T17:14:46.583] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+  
+[2024-10-19T17:14:46.584] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14

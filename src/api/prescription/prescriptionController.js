@@ -46,6 +46,42 @@ function updatePrescription(req, response) {
   });
 }
 
+function insertTaskFinances(req, response) {
+  auth.verify(req.headers["jwt"], (data) => {
+    if (data) {
+      let { arr } = req.body;
+      let { id } = req.params;
+      try {
+        arr = arr ? arr : [];
+      } catch (error) {
+        arr = [];
+      }
+      mod.insertTaskFinances(data, id, arr, (result) => {
+        if (result) response(getRes(true, result));
+        else response(getRes(false, null, msg.error));
+      });
+    } else response(getRes(false, null, msg.invalidToken));
+  });
+}
+
+function updateTaskFinances(req, response) {
+  auth.verify(req.headers["jwt"], (data) => {
+    if (data) {
+      let { arr } = req.body;
+      let { id } = req.params;
+      try {
+        arr = arr ? arr : [];
+      } catch (error) {
+        arr = [];
+      }
+      mod.updateTaskFinances(data, id, arr, (result) => {
+        if (result) response(getRes(true, result));
+        else response(getRes(false, null, msg.error));
+      });
+    } else response(getRes(false, null, msg.invalidToken));
+  });
+}
+
 function changePrescriptionStatus(req, response) {
   auth.verify(req.headers["jwt"], (data) => {
     if (data) {
@@ -64,5 +100,7 @@ module.exports = {
   getPrescription,
   createPrescription,
   updatePrescription,
-  changePrescriptionStatus
+  changePrescriptionStatus,
+  insertTaskFinances,
+  updateTaskFinances
 };
