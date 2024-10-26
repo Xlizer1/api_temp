@@ -40,7 +40,7 @@ async function insertSensorReads(params) {
         ${1}
     )
   `;
-  executeQuery(sql, "inserting sensor reads", result => console.log(result))
+  executeQuery(sql, "inserting sensor reads", (result) => result);
 }
 
 mqttClient.on("connect", () => {

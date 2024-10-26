@@ -800,8 +800,45 @@ function handleAllowSendEmail(data, callback) {
   });
 }
 
+function getUserDetails(data, callback) {
+  const { user_id } = data;
+  let sql = `
+    SELECT
+      u.user_id AS id,
+      u.username,
+      u.department_id,
+      u.name,
+      u.email,
+      u.enabled,
+      u.phone,
+      u.birthdate,
+      u.created_at,
+      dept.department_id AS dept_id,
+      dept.name AS dept,
+      ui.path AS img_path
+    FROM
+      users u
+    LEFT JOIN
+      user_images ui ON ui.user_id = u.user_id
+    LEFT JOIN
+      departments dept ON dept.department_id = u.department_id
+    WHERE
+      u.user_id = ${user_id}
+    AND
+      ui.is_default = 1
+  `;
+  executeQuery(sql, "getUserDetails", (result) => {
+    if (result && result[0]) {
+      callback(result[0]);
+    } else {
+      callback(false);
+    }
+  });
+}
+
 module.exports = {
   getDateTime,
+  getUserDetails,
   checkUsernameOrIdExisting,
   checkDepartmentId,
   getPermissions,

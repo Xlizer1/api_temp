@@ -4060,3 +4060,936 @@
         1
   
 [2024-10-19T17:14:46.584] [ERROR] errors - inserting sensor reads: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 14
+[2024-10-20T21:24:53.436] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:24:53.437] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:24:58.436] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:24:58.436] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:03.439] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:03.439] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:08.439] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:08.440] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:13.449] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:13.449] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:18.456] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:18.457] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:23.456] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:23.457] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:28.465] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:28.465] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:33.479] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:33.479] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:38.478] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:38.479] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:43.487] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:43.488] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:48.488] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:48.489] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:53.502] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:53.502] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:25:58.502] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:25:58.502] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:03.503] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:03.504] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:08.512] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:08.513] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:13.516] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:13.516] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:18.529] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:18.530] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:23.538] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:23.538] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:28.544] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:28.544] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:33.551] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:33.551] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:38.553] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:38.553] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:43.567] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:43.567] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:48.574] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:48.575] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:53.576] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:53.577] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:26:58.588] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:26:58.588] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:03.588] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:03.588] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:08.590] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:08.591] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:13.592] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:13.592] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:18.596] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:18.596] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:23.605] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:23.606] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:28.610] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:28.611] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:33.611] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:33.611] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:38.626] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:38.626] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:43.641] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:43.641] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:48.655] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:48.656] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-20T21:27:53.661] [ERROR] errors - inserting sensor readssql: 
+    INSERT INTO
+      sensor_reads(
+            temp,
+            hr,
+            spo2,
+            created_at,
+            created_by
+        )
+    VALUES (
+        28.39,
+        70,
+        98,
+        NOW(),
+        1
+    )
+  
+[2024-10-20T21:27:53.662] [ERROR] errors - inserting sensor reads: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.sensor_reads' doesn't exist
+[2024-10-25T00:48:41.600] [ERROR] errors - removeOldDetailsSql #48sql: 
+          DELETE FROM prescription_details WHERE p_id = 48
+      
+[2024-10-25T00:48:41.601] [ERROR] errors - removeOldDetailsSql #48: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.prescription_details' doesn't exist
+[2024-10-25T00:48:41.602] [ERROR] errors - insertTaskDetails #48sql: 
+              INSERT INTO
+                  prescription_details (
+                      p_id,
+                      medicine_name,
+                      dose,
+                      note,
+                      provided
+                  )
+              VALUES (
+                  48,
+                  "fvdv",
+                  3,
+                  "gfdg",
+                  1
+              )
+          
+[2024-10-25T00:48:41.602] [ERROR] errors - insertTaskDetails #48: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.prescription_details' doesn't exist
+[2024-10-25T00:48:41.609] [ERROR] errors - getTaskStatussql: 
+                SELECT 
+                    *
+                FROM
+                    prescription_details
+                WHERE
+                    p_id = 48
+              
+[2024-10-25T00:48:41.609] [ERROR] errors - getTaskStatus: Error: ER_NO_SUCH_TABLE: Table 'care_pulse.prescription_details' doesn't exist
+[2024-10-26T21:05:36.428] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      users.username,
+      users.department_id,
+      users.name,
+      users.email,
+      users.phone,
+      users.birthdate,
+      users.image_path
+    FROM
+      users
+    LEFT JOIN
+      user_images ui on users.user_id = ui.user_id WHERE is_default IS 1
+    WHERE
+      user_id = 1
+  
+[2024-10-26T21:05:36.429] [ERROR] errors - getUserDetails: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+    WHERE
+      user_id = 1' at line 12
+[2024-10-26T21:05:39.446] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      users.username,
+      users.department_id,
+      users.name,
+      users.email,
+      users.phone,
+      users.birthdate,
+      users.image_path
+    FROM
+      users
+    LEFT JOIN
+      user_images ui on users.user_id = ui.user_id WHERE is_default IS 1
+    WHERE
+      user_id = 1
+  
+[2024-10-26T21:05:39.447] [ERROR] errors - getUserDetails: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+    WHERE
+      user_id = 1' at line 12
+[2024-10-26T21:05:48.326] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      users.username,
+      users.department_id,
+      users.name,
+      users.email,
+      users.phone,
+      users.birthdate,
+      users.image_path
+    FROM
+      users
+    LEFT JOIN
+      user_images ui on users.user_id = ui.user_id WHERE is_default = 1
+    WHERE
+      user_id = 1
+  
+[2024-10-26T21:05:48.327] [ERROR] errors - getUserDetails: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+      user_id = 1' at line 13
+[2024-10-26T21:06:12.857] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      users.username,
+      users.department_id,
+      users.name,
+      users.email,
+      users.phone,
+      users.birthdate,
+      users.image_path
+    FROM
+      users
+    LEFT JOIN
+      user_images ui on users.user_id = ui.user_id AND is_default = 1
+    WHERE
+      user_id = 1
+  
+[2024-10-26T21:06:12.858] [ERROR] errors - getUserDetails: Error: ER_NON_UNIQ_ERROR: Column 'user_id' in where clause is ambiguous
+[2024-10-26T21:06:50.329] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      users.username,
+      users.department_id,
+      users.name,
+      users.email,
+      users.phone,
+      users.birthdate,
+      users.image_path
+    FROM
+      users
+    LEFT JOIN
+      user_images ui on users.user_id = ui.user_id WHERE ui.is_default = 1
+    WHERE
+      user_id = 1
+  
+[2024-10-26T21:06:50.330] [ERROR] errors - getUserDetails: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+      user_id = 1' at line 13
+[2024-10-26T21:06:58.305] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      users.username,
+      users.department_id,
+      users.name,
+      users.email,
+      users.phone,
+      users.birthdate,
+      users.image_path
+    FROM
+      users
+    LEFT JOIN
+      user_images ui on users.user_id = ui.user_id WHERE ui.is_default = 1
+    WHERE
+      user_id = 1
+  
+[2024-10-26T21:06:58.305] [ERROR] errors - getUserDetails: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE
+      user_id = 1' at line 13
+[2024-10-26T21:07:13.032] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      users.username,
+      users.department_id,
+      users.name,
+      users.email,
+      users.phone,
+      users.birthdate,
+      users.image_path
+    FROM
+      users
+    LEFT JOIN
+      user_images ui on users.user_id = ui.user_id
+    WHERE
+      user_id = 1
+    AND
+      ui.is_default = 1
+  
+[2024-10-26T21:07:13.033] [ERROR] errors - getUserDetails: Error: ER_NON_UNIQ_ERROR: Column 'user_id' in where clause is ambiguous
+[2024-10-26T21:08:05.855] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      users.username,
+      users.department_id,
+      users.name,
+      users.email,
+      users.phone,
+      users.birthdate,
+      users.image_path
+    FROM
+      users
+    LEFT JOIN
+      user_images ui ON users.user_id = ui.user_id
+    WHERE
+      user_id = 1
+    AND
+      ui.is_default = 1
+  
+[2024-10-26T21:08:05.856] [ERROR] errors - getUserDetails: Error: ER_NON_UNIQ_ERROR: Column 'user_id' in where clause is ambiguous
+[2024-10-26T21:10:45.630] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      u.username,
+      u.department_id,
+      u.name,
+      u.email,
+      u.phone,
+      u.birthdate,
+      u.image_path,
+      ui.path AS img_path
+    FROM
+      users u
+    LEFT JOIN
+      user_images ui ON ui.user_id = u.user_id
+    LEFT JOIN
+      departments dept ON dept.id = u.department_id
+    WHERE
+      users.user_id = 1
+    AND
+      ui.is_default = 1
+  
+[2024-10-26T21:10:45.631] [ERROR] errors - getUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'users.user_id' in 'where clause'
+[2024-10-26T21:10:47.240] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      u.username,
+      u.department_id,
+      u.name,
+      u.email,
+      u.phone,
+      u.birthdate,
+      u.image_path,
+      ui.path AS img_path
+    FROM
+      users u
+    LEFT JOIN
+      user_images ui ON ui.user_id = u.user_id
+    LEFT JOIN
+      departments dept ON dept.id = u.department_id
+    WHERE
+      users.user_id = 1
+    AND
+      ui.is_default = 1
+  
+[2024-10-26T21:10:47.241] [ERROR] errors - getUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'users.user_id' in 'where clause'
+[2024-10-26T21:11:17.578] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      u.username,
+      u.department_id,
+      u.name,
+      u.email,
+      u.phone,
+      u.birthdate,
+      u.image_path,
+      ui.path AS img_path
+    FROM
+      users u
+    LEFT JOIN
+      user_images ui ON ui.user_id = u.user_id
+    LEFT JOIN
+      departments dept ON dept.id = u.department_id
+    WHERE
+      u.user_id = 1
+    AND
+      ui.is_default = 1
+  
+[2024-10-26T21:11:17.578] [ERROR] errors - getUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'dept.id' in 'on clause'
+[2024-10-26T21:12:34.643] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      u.username,
+      u.department_id,
+      u.name,
+      u.email,
+      u.phone,
+      u.birthdate,
+      dept.id AS dept_id,
+      dept.name AS dept,
+      ui.path AS img_path
+    FROM
+      users u
+    LEFT JOIN
+      user_images ui ON ui.user_id = u.user_id
+    LEFT JOIN
+      departments dept ON dept.department_id = u.department_id
+    WHERE
+      u.user_id = 1
+    AND
+      ui.is_default = 1
+  
+[2024-10-26T21:12:34.643] [ERROR] errors - getUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'dept.id' in 'field list'

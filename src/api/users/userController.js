@@ -628,9 +628,21 @@ function handleAllowSendEmail(req, response) {
   });
 }
 
+function getUserDetails(req, response) {
+  auth.verify(req.headers["jwt"], (data) => {
+    if (data) {
+      mod.getUserDetails(data, (result) => {
+        if (result) response({ status: true, data: result });
+        else response({ status: false, data: null });
+      });
+    } else response(getRes(false, null, msg.invalidToken));
+  });
+}
+
 module.exports = {
   createUsers,
   updateUser,
+  getUserDetails,
   getUsers,
   getUsersList,
   changePassword,
