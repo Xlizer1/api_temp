@@ -15,6 +15,19 @@ async function getAppointments(req, response) {
     } else response(getRes(false, null, msg.invalidToken));
   });
 }
+async function getAllAppointments(req, response) {
+  auth.verify(req.headers["jwt"], (data) => {
+    if (data) {
+      if (data.roles_id.includes(5)) {
+        const params = req.query;
+        mod.getAllAppointments(data, params, (result) => {
+          if (result) response(getRes(true, result));
+          else response(getRes(false, null, msg.error));
+        });
+      } else response(getRes(false, null, msg.failedCreate));
+    } else response(getRes(false, null, msg.invalidToken));
+  });
+}
 
 async function createAppointments(req, response) {
   auth.verify(req.headers["jwt"], (data) => {
@@ -97,6 +110,7 @@ async function deleteAppointments(req, response) {
 
 module.exports = {
   getAppointments,
+  getAllAppointments,
   createAppointments,
   updateAppointments,
   deleteAppointments,

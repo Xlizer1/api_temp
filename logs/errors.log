@@ -4993,3 +4993,16 @@
       ui.is_default = 1
   
 [2024-10-26T21:12:34.643] [ERROR] errors - getUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'dept.id' in 'field list'
+[2024-10-28T16:10:42.727] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        WHERE 
+            a.deleted_at IS NULL
+   AND a.patient_id = '1' ORDER BY p.created_at DESC LIMIT 0, 10
+[2024-10-28T16:10:42.728] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.created_at' in 'order clause'

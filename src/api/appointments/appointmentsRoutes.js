@@ -8,6 +8,12 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/all", (req, res) => {
+  appointmentsController.getAllAppointments(req, (response) => {
+    res.json(response);
+  });
+});
+
 router.post("/", (req, res) => {
   appointmentsController.createAppointments(req, (response) => {
     res.json(response);

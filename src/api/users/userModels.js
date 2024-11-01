@@ -827,6 +827,8 @@ function getUserDetails(data, callback) {
     AND
       ui.is_default = 1
   `;
+
+  console.log(sql)
   executeQuery(sql, "getUserDetails", (result) => {
     if (result && result[0]) {
       callback(result[0]);

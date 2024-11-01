@@ -26,7 +26,7 @@ async function getAppointments(data, params, callBack) {
     sql += ` AND u.name LIKE "%${patient_name}%"`;
   }
 
-  if(user_department_id === 4) {
+  if (user_department_id === 4) {
     sql += ` AND a.doc_id = '${user_id}'`;
   }
 
@@ -39,6 +39,43 @@ async function getAppointments(data, params, callBack) {
   }
 
   executeQuery(sql, "getAppointments", (result) => {
+    if (result) callBack(result);
+    else callBack(false);
+  });
+}
+
+async function getAllAppointments(data, params, callBack) {
+  const { user_id, user_department_id } = data;
+  const { offset, itemsPerPage, patient_id } = params;
+
+  console.log(offset, itemsPerPage, patient_id);
+
+  var sql = `
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age,
+            t.name AS doc
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        LEFT JOIN
+            users t on t.user_id = a.doc_id
+        WHERE 
+            a.deleted_at IS NULL
+  `;
+
+  if (patient_id) {
+    sql += ` AND a.patient_id = '${patient_id}'`;
+  }
+
+  sql += ` ORDER BY a.created_at DESC LIMIT ${
+    offset * itemsPerPage
+  }, ${itemsPerPage}`;
+
+  executeQuery(sql, "getAppointments", (result) => {
+    console.log(result)
     if (result) callBack(result);
     else callBack(false);
   });
@@ -190,6 +227,7 @@ async function deleteAppointments(data, appo_id, callBack) {
 
 module.exports = {
   getAppointments,
+  getAllAppointments,
   createAppointments,
   updateAppointments,
   deleteAppointments,
