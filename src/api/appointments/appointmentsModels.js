@@ -48,8 +48,6 @@ async function getAllAppointments(data, params, callBack) {
   const { user_id, user_department_id } = data;
   const { offset, itemsPerPage, patient_id } = params;
 
-  console.log(offset, itemsPerPage, patient_id);
-
   var sql = `
         SELECT
             a.*,
@@ -75,7 +73,6 @@ async function getAllAppointments(data, params, callBack) {
   }, ${itemsPerPage}`;
 
   executeQuery(sql, "getAppointments", (result) => {
-    console.log(result)
     if (result) callBack(result);
     else callBack(false);
   });
@@ -152,7 +149,6 @@ async function isPatientsNumberPerDayExceeded(doc_id, date) {
         `;
         executeQuery(sql2, "patientsPerDay", (result2) => {
           const patientsPerDay = result2[0].patients_per_day;
-          console.log(patientsCount >= patientsPerDay, date);
           if (patientsCount > patientsPerDay) {
             resolve(true);
           } else {

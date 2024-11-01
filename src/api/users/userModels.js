@@ -256,12 +256,10 @@ function updateUserPassword(data, user_id, new_password, callback) {
 }
 
 function getUsers(haveRole, user_id, departments, searchFields, callback) {
-  //    var sql = `select a.*,(select created_at from activities where log_type_id = 5 and user_id=a.user_id order by created_at desc limit 1) as last_login from users a  where a.deleted_at is null `
   var select = `SELECT a.*,a.last_login_date AS last_login  `;
   let selectTotal = `SELECT count(*) as total_rows `;
   let sql = ` from users a 
     where a.deleted_at is null`;
-  // //console.log('getUsers===>',searchFields)
   if (user_id) sql = sql + ` and a.user_id = ${user_id}`;
   if (!haveRole) sql += ` and a.enabled= 1`;
 
@@ -308,7 +306,6 @@ function getUsers(haveRole, user_id, departments, searchFields, callback) {
       searchFields.itemsPerPage
     }`;
     executeQuery(select + sql, "getUsers", (result) => {
-      //    //console.log(result)
       sortUsersData(haveRole, result, departments, (_data) => {
         let reponse = {
           total: totalRows,
@@ -499,30 +496,53 @@ function getUserByUsername(username, callback) {
 }
 
 function getUsersList(dataFields, callback) {
-  var haveRole = dataFields?.haveRole,
-    department_id = dataFields?.department_id ? dataFields?.department_id : 0,
-    is_engineer = dataFields?.is_engineer,
-    enabled = dataFields?.enabled,
-    has_telegram_id = dataFields?.has_telegram_id
-      ? dataFields?.has_telegram_id
-      : false;
-  var sql = `select a.name,a.phone,a.email,a.user_id,a.department_id,a.is_group_base_role from users a  where a.deleted_at is null `;
-  if (department_id) {
-    sql += ` AND department_id <> 12 AND department_id=${department_id}`;
-  } else {
-    sql += ` AND department_id <> 12 `;
-  }
-  if (!haveRole) {
-    sql += ` and a.enabled= 1`;
-  } else if (haveRole && enabled) {
-    sql += ` and a.enabled= 1`;
-  }
-  if (is_engineer) sql += ` and a.department_id =9`;
+  const { haveRole, department_id = 0, is_engineer, enabled, has_telegram_id = false } = dataFields;
 
-  ////console.log(sql)
+  let sql = `
+    SELECT
+      a.user_id AS id,
+      a.username,
+      a.department_id,
+      a.name,
+      a.email,
+      a.enabled,
+      a.phone,
+      a.birthdate,
+      a.created_at,
+      dept.department_id AS dept_id,
+      dept.name AS dept,
+      GROUP_CONCAT(ui.path) AS img_paths, -- Concatenate image paths
+      a.is_group_base_role
+    FROM
+      users a
+    LEFT JOIN
+      user_images ui ON ui.user_id = a.user_id
+    LEFT JOIN
+      departments dept ON dept.department_id = a.department_id
+    WHERE
+      a.deleted_at IS NULL
+  `;
+
+  if (department_id) {
+    sql += ` AND a.department_id <> 12 AND a.department_id = ${department_id}`;
+  } else {
+    sql += ` AND a.department_id <> 12`;
+  }
+
+  if (!haveRole) {
+    sql += ` AND a.enabled = 1`;
+  } else if (haveRole && enabled) {
+    sql += ` AND a.enabled = 1`;
+  }
+
+  if (is_engineer) {
+    sql += ` AND a.department_id = 9`;
+  }
+
+  sql += ` GROUP BY a.user_id`; // Group by user_id to avoid duplicates
+
   executeQuery(sql, "getUsersList", (result) => {
     callback(result);
-    return;
   });
 }
 
@@ -825,11 +845,11 @@ function getUserDetails(data, callback) {
     WHERE
       u.user_id = ${user_id}
     AND
-      ui.is_default = 1
+      (ui.path IS NULL OR ui.path IS NOT NULL);
   `;
 
-  console.log(sql)
   executeQuery(sql, "getUserDetails", (result) => {
+    console.log(result)
     if (result && result[0]) {
       callback(result[0]);
     } else {

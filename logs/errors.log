@@ -5006,3 +5006,57 @@
             a.deleted_at IS NULL
    AND a.patient_id = '1' ORDER BY p.created_at DESC LIMIT 0, 10
 [2024-10-28T16:10:42.728] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.created_at' in 'order clause'
+[2024-11-01T20:29:22.843] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      u.user_id AS id,
+      u.username,
+      u.department_id,
+      u.name,
+      u.email,
+      u.enabled,
+      u.phone,
+      u.birthdate,
+      u.created_at,
+      dept.department_id AS dept_id,
+      dept.name AS dept,
+      ui.path AS img_path
+    FROM
+      users u
+    LEFT JOIN
+      user_images ui ON ui.user_id = u.user_id
+    LEFT JOIN
+      departments dept ON dept.department_id = u.department_id
+    WHERE
+      u.user_id = 3
+    AND
+      ui.is_default = 1
+    AND
+      ui.image_url IS NULL OR ui.image_url IS NOT NULL
+  
+[2024-11-01T20:29:22.844] [ERROR] errors - getUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'ui.image_url' in 'where clause'
+[2024-11-01T20:30:18.175] [ERROR] errors - getUserDetailssql: 
+    SELECT
+      u.user_id AS id,
+      u.username,
+      u.department_id,
+      u.name,
+      u.email,
+      u.enabled,
+      u.phone,
+      u.birthdate,
+      u.created_at,
+      dept.department_id AS dept_id,
+      dept.name AS dept,
+      ui.path AS img_path
+    FROM
+      users u
+    LEFT JOIN
+      user_images ui ON ui.user_id = u.user_id
+    LEFT JOIN
+      departments dept ON dept.department_id = u.department_id
+    WHERE
+      u.user_id = 3
+    AND
+      ui.img_path IS NULL OR ui.img_path IS NOT NULL
+  
+[2024-11-01T20:30:18.175] [ERROR] errors - getUserDetails: Error: ER_BAD_FIELD_ERROR: Unknown column 'ui.img_path' in 'where clause'

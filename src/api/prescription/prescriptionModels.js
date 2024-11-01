@@ -6,9 +6,8 @@ const {
 } = require("../../config/pusher");
 
 async function getPrescription(data, params, callBack) {
-  const user_id = data?.user_id;
   const user_department_id = data?.user_department_id;
-  const { name, itemsPerPage, offset } = params;
+  const { name, user_id, itemsPerPage, offset } = params;
 
   let selectTotal = `SELECT count(p.id) as total_rows`;
 

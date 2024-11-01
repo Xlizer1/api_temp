@@ -156,9 +156,6 @@ async function changeAppointmentRequestsStatus(data, params, callBack) {
       UPDATE appointments_requests SET status_id = ${status_id}, approval_note = "${note}"
       WHERE appointments_requests.id = ${id}
   `;
-
-  console.log("yep", phone)
-
   executeQuery(sql, "getAppointments", (result) => {
     if (result) {
       client.messages

@@ -73,7 +73,6 @@ function updateUser(req, response) {
           if (existed) {
             mod.updateUserDetails(data, req, (result) => {
               if (result) {
-                // //console.log(result)
                 if (result.changedRows > 0)
                   response(getRes(true, null, msg.updated));
                 else response(getRes(true, null, msg.noThingUpdate));
@@ -631,7 +630,8 @@ function handleAllowSendEmail(req, response) {
 function getUserDetails(req, response) {
   auth.verify(req.headers["jwt"], (data) => {
     if (data) {
-      mod.getUserDetails(data, (result) => {
+      const { user_id } = req.query;
+      mod.getUserDetails({ user_id: user_id }, (result) => {
         if (result) response({ status: true, data: result });
         else response({ status: false, data: null });
       });
