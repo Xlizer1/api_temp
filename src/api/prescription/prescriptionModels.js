@@ -7,7 +7,7 @@ const {
 
 async function getPrescription(data, params, callBack) {
   const user_department_id = data?.user_department_id;
-  const { name, user_id, itemsPerPage, offset } = params;
+  const { note, patient_id, doctor_id, itemsPerPage, offset } = params;
 
   let selectTotal = `SELECT count(p.id) as total_rows`;
 
@@ -35,12 +35,20 @@ async function getPrescription(data, params, callBack) {
   } else {
     sql += `
         WHERE
-            p.created_by = ${user_id} OR p.patient_id = ${user_id}
+            p.created_by = ${patient_id} OR p.patient_id = ${patient_id}
     `;
   }
 
-  if (name) {
-    sql += ` AND u.name LIKE "%${name}%"`;
+  if (patient_id) {
+    sql += ` AND p.patient_id = ${patient_id}`;
+  }
+
+  if (doctor_id) {
+    sql += ` AND doc.user_id LIKE "%${doctor_id}%"`;
+  }
+
+  if (note) {
+    sql += ` AND p.note LIKE "%${note}%"`;
   }
 
   executeQuery(selectTotal + sql, "getPrescription", (resultTotal) => {
@@ -83,7 +91,7 @@ async function getPrescription(data, params, callBack) {
 
               return {
                 ...prescription,
-                arr: requestFinancesResult,
+                arr: requestFinancesResult?.length ? requestFinancesResult : [],
               };
             })
           );
@@ -127,12 +135,11 @@ async function createPrescription(data, params, callBack) {
 }
 
 async function updatePrescription(data, params, callBack) {
-  const { patient_id, prescription_id, prescription, pharmacist_note } = params;
-
+  const { prescription_id, prescription, pharmacist_note } = params;
+  
   var sql = `
       UPDATE prescription
       SET
-        patient_id = "${patient_id}",
         prescription = "${prescription}",
         note = "${pharmacist_note}"
       WHERE

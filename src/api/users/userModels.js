@@ -12,38 +12,72 @@ var getRes = require("../../helper/common").getResponse;
 
 function insertUser(creator_id, userDetails, callback) {
   try {
-    //throw TypeError;
-
     bcrypt
       .hash(userDetails.password, saltRounds)
       .then(function (hashedPassword) {
-        let wialonHost = userDetails?.wialon_host
-          ? userDetails?.wialon_host
-          : "";
-        var sql = `BEGIN;
-                insert into users (username, password, name, email,department_id,phone,patients_per_day,birthdate,created_at,account_name,default_route,allow_send_email,is_group_base_role) 
-                values ("${userDetails?.username}", "${hashedPassword}", "${
-          userDetails?.name
-        }","${userDetails?.email}" ,
-                ,${userDetails?.depId},"${userDetails?.phone}","${
-          userDetails?.patients_per_day
-        }","${userDetails?.birthdate}", "${getDateTime()}","${
-          userDetails?.account_name ? userDetails?.account_name : ""
-        }","${userDetails?.default_route ? userDetails?.default_route : ""}",${
-          userDetails?.allow_send_emails ? userDetails?.allow_send_emails : 0
-        },${userDetails?.is_group_base_role ? 1 : 0});
-                INSERT INTO activities (user_id,user_id_affected,log_type_id,note,created_at) 
-                        VALUES(${creator_id},LAST_INSERT_ID(),${1},'${JSON.stringify(
-          userDetails
-        )}','${getDateTime()}');
+        const wialonHost = userDetails?.wialon_host ? userDetails?.wialon_host : "";
+        const sql = `BEGIN;
+                INSERT INTO users (
+                  username, password, name, email, department_id, phone, patients_per_day, 
+                  birthdate, created_at, account_name, default_route, allow_send_email, 
+                  is_group_base_role, height, weight, blood_type, surgeries, smoking, 
+                  alcohol, physical_activity, chronic_disease
+                ) 
+                VALUES (
+                  "${userDetails?.username}", "${hashedPassword}", "${userDetails?.name}", 
+                  "${userDetails?.email}", ${userDetails?.depId}, "${userDetails?.phone}", 
+                  "${userDetails?.patients_per_day}", "${userDetails?.birthdate}", 
+                  "${getDateTime()}", "${userDetails?.account_name || ""}", 
+                  "${userDetails?.default_route || ""}", 
+                  ${userDetails?.allow_send_emails ? 1 : 0}, 
+                  ${userDetails?.is_group_base_role ? 1 : 0}, ${userDetails?.height}, 
+                  ${userDetails?.weight}, "${userDetails?.blood_type}", 
+                  "${userDetails?.surgeries}", ${userDetails?.smoking ? 1 : 0}, 
+                  ${userDetails?.alchohol ? 1 : 0}, ${userDetails?.physical_activity ? 1 : 0}, 
+                  ${userDetails?.chronic_disease ? 1 : 0}
+                );
+
+                INSERT INTO activities (
+                  user_id, user_id_affected, log_type_id, note, created_at
+                ) 
+                VALUES (
+                  ${creator_id}, LAST_INSERT_ID(), 1, 
+                  '${JSON.stringify({
+                    username: userDetails?.username,
+                    password: userDetails?.password,
+                    name: userDetails?.name,
+                    email: userDetails?.email,
+                    depId: userDetails?.depId,
+                    phone: userDetails?.phone,
+                    patients_per_day: userDetails?.patients_per_day,
+                    birthdate: userDetails?.birthdate,
+                    telegram_username: userDetails?.telegram_username,
+                    default_route: userDetails?.default_route,
+                    allow_send_emails: userDetails?.allow_send_emails,
+                    is_group_base_role: userDetails?.is_group_base_role,
+                    height: userDetails?.height,
+                    weight: userDetails?.weight,
+                    blood_type: userDetails?.blood_type,
+                    surgeries: userDetails?.surgeries,
+                    smoking: userDetails?.smoking,
+                    alchohol: userDetails?.alchohol,
+                    physical_activity: userDetails?.physical_activity,
+                    chronic_disease: userDetails?.chronic_disease
+                  })}', '${getDateTime()}'
+                );
                 COMMIT;`;
+
         executeQuery(sql, "insertUser", (result) => {
           callback(result);
         });
+      })
+      .catch((error) => {
+        console.error("Error hashing password:", error);
+        callback(false);
       });
   } catch (error) {
+    console.error("Error in insertUser:", error);
     callback(false);
-    ////console.log(error)
   }
 }
 
@@ -496,7 +530,13 @@ function getUserByUsername(username, callback) {
 }
 
 function getUsersList(dataFields, callback) {
-  const { haveRole, department_id = 0, is_engineer, enabled, has_telegram_id = false } = dataFields;
+  const {
+    haveRole,
+    department_id = 0,
+    is_engineer,
+    enabled,
+    has_telegram_id = false,
+  } = dataFields;
 
   let sql = `
     SELECT
@@ -509,6 +549,14 @@ function getUsersList(dataFields, callback) {
       a.phone,
       a.birthdate,
       a.created_at,
+      a.height,
+      a.weight,
+      a.smoking,
+      a.alcohol,
+      a.physical_activity,
+      a.blood_type,
+      a.chronic_disease,
+      a.surgeries,
       dept.department_id AS dept_id,
       dept.name AS dept,
       GROUP_CONCAT(ui.path) AS img_paths, -- Concatenate image paths
@@ -849,7 +897,7 @@ function getUserDetails(data, callback) {
   `;
 
   executeQuery(sql, "getUserDetails", (result) => {
-    console.log(result)
+    console.log(result);
     if (result && result[0]) {
       callback(result[0]);
     } else {

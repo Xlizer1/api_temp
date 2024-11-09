@@ -8,54 +8,58 @@ const getDateTime = require("../../helper/common").getDateTime;
 function createUsers(req, response) {
   auth.verify(req.headers["jwt"], (data) => {
     if (data) {
-      if (data.roles_id.includes(1)) {
-        // check permission of create user
-        var user = {
-          username: req.body.username,
-          password: req.body.password,
-          name: req.body.name,
-          email: req.body.email,
-          depId: req.body.department_id,
-          phone: req.body.phone,
-          patients_per_day: req.body.patients_per_day,
-          birthdate: req.body.birthdate,
-          telegram_username: req.body.telegram_username,
-          default_route: req.body.default_route,
-          allow_send_emails: req?.body?.allow_send_emails
-            ? req.body.allow_send_emails
-            : 0,
-          is_group_base_role: req?.body?.is_group_base_role
-            ? req.body.is_group_base_role
-            : 0,
-        };
-        //check if username existed
-        mod.checkUsernameOrIdExisting(user.username, null, (existed) => {
-          if (!existed) {
-            mod.checkDepartmentId(user.depId, (existed) => {
-              if (!existed)
-                response({
-                  status: false,
-                  data: { message: msg.depIdNotExist },
-                });
-              else {
-                mod.insertUser(data.user_id, user, (result) => {
-                  if (result)
-                    response({
-                      status: true,
-                      data: {
-                        message: msg.inserted,
-                        user_id: result[1].insertId,
-                      },
-                    });
-                  else
-                    response({ status: false, data: { message: msg.error } });
-                });
-              }
-            });
-          } else response({ status: false, data: { message: msg.userExist } });
-        });
-      } else
-        response({ status: false, data: { message: msg.failedCreateUser } });
+      // check permission of create user
+      var user = {
+        username: req.body.username,
+        password: req.body.password,
+        name: req.body.name,
+        email: req.body.email,
+        depId: req.body.department_id,
+        phone: req.body.phone,
+        patients_per_day: req.body.patients_per_day,
+        birthdate: req.body.birthdate,
+        telegram_username: req.body.telegram_username,
+        default_route: req.body.default_route,
+        allow_send_emails: req?.body?.allow_send_emails
+          ? req.body.allow_send_emails
+          : 0,
+        is_group_base_role: req?.body?.is_group_base_role
+          ? req.body.is_group_base_role
+          : 0,
+        height: req.body.height,
+        weight: req.body.weight,
+        blood_type: req.body.bloodtype,
+        surgeries: req.body.surgeries,
+        smoking: req.body.smoking,
+        alchohol: req.body.alchohol,
+        physical_activity: req.body.physicalActivity,
+        chronic_disease: req.body.chronicDisease,
+      };
+      //check if username existed
+      mod.checkUsernameOrIdExisting(user.username, null, (existed) => {
+        if (!existed) {
+          mod.checkDepartmentId(user.depId, (existed) => {
+            if (!existed)
+              response({
+                status: false,
+                data: { message: msg.depIdNotExist },
+              });
+            else {
+              mod.insertUser(data.user_id, user, (result) => {
+                if (result)
+                  response({
+                    status: true,
+                    data: {
+                      message: msg.inserted,
+                      user_id: result[1].insertId,
+                    },
+                  });
+                else response({ status: false, data: { message: msg.error } });
+              });
+            }
+          });
+        } else response({ status: false, data: { message: msg.userExist } });
+      });
     } else response({ status: false, data: { message: msg.invalidToken } });
   });
 }
@@ -64,23 +68,17 @@ function updateUser(req, response) {
   // check autherization
   auth.verify(req.headers["jwt"], (data) => {
     if (data) {
-      var haveRole =
-        data.roles_id.includes(2) ||
-        (!data.roles_id.includes(2) && req.params.user_id == data.user_id);
-
-      if (haveRole) {
-        mod.checkUsernameOrIdExisting(null, req.params.user_id, (existed) => {
-          if (existed) {
-            mod.updateUserDetails(data, req, (result) => {
-              if (result) {
-                if (result.changedRows > 0)
-                  response(getRes(true, null, msg.updated));
-                else response(getRes(true, null, msg.noThingUpdate));
-              } else response(getRes(false, null, msg.error));
-            });
-          } else response(getRes(false, null, msg.userNotFound));
-        });
-      } else response(getRes(false, null, msg.unauthorized));
+      mod.checkUsernameOrIdExisting(null, req.params.user_id, (existed) => {
+        if (existed) {
+          mod.updateUserDetails(data, req, (result) => {
+            if (result) {
+              if (result.changedRows > 0)
+                response(getRes(true, null, msg.updated));
+              else response(getRes(true, null, msg.noThingUpdate));
+            } else response(getRes(false, null, msg.error));
+          });
+        } else response(getRes(false, null, msg.userNotFound));
+      });
     } else response({ status: false, data: { message: msg.invalidToken } });
   });
 }
