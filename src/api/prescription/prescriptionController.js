@@ -7,6 +7,7 @@ var getRes = require("../../helper/common").getResponse;
 function getPrescription(req, response) {
   auth.verify(req.headers["jwt"], (data) => {
     if (data) {
+      console.log(req.ip);
       if (data.roles_id.includes(5)) {
         mod.getPrescription(data, req.query, (result) => {
           if (result)

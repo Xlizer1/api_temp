@@ -5918,3 +5918,441 @@
                 );
                 COMMIT;
 [2024-11-09T23:07:11.927] [ERROR] errors - insertUser: Error: ER_BAD_FIELD_ERROR: Unknown column 'alchohol' in 'field list'
+[2024-11-10T22:37:29.729] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:37:29.730] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:37:29.733] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:37:29.734] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:37:29.734] [ERROR] errors - getTaskStatussql: 
+                SELECT 
+                    *
+                FROM
+                    prescription_details
+                WHERE
+                    p_id = undefined
+              
+[2024-11-10T22:37:29.734] [ERROR] errors - getTaskStatus: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:37:29.735] [ERROR] errors - getTaskStatussql: 
+                SELECT 
+                    *
+                FROM
+                    prescription_details
+                WHERE
+                    p_id = undefined
+              
+[2024-11-10T22:37:29.735] [ERROR] errors - getTaskStatus: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:37:29.741] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:37:29.741] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:37:29.741] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:37:29.742] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:37:29.742] [ERROR] errors - getTaskStatussql: 
+                SELECT 
+                    *
+                FROM
+                    prescription_details
+                WHERE
+                    p_id = undefined
+              
+[2024-11-10T22:37:29.742] [ERROR] errors - getTaskStatus: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:37:29.743] [ERROR] errors - getTaskStatussql: 
+                SELECT 
+                    *
+                FROM
+                    prescription_details
+                WHERE
+                    p_id = undefined
+              
+[2024-11-10T22:37:29.743] [ERROR] errors - getTaskStatus: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:38:26.281] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:38:26.282] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:38:26.283] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:38:26.284] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:38:26.285] [ERROR] errors - getTaskStatussql: 
+                SELECT 
+                    *
+                FROM
+                    prescription_details
+                WHERE
+                    p_id = undefined
+              
+[2024-11-10T22:38:26.285] [ERROR] errors - getTaskStatus: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:38:26.286] [ERROR] errors - getTaskStatussql: 
+                SELECT 
+                    *
+                FROM
+                    prescription_details
+                WHERE
+                    p_id = undefined
+              
+[2024-11-10T22:38:26.286] [ERROR] errors - getTaskStatus: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:38:53.339] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:38:53.340] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:38:53.340] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:38:53.341] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:39:03.891] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:39:03.892] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:39:03.894] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:39:03.894] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:39:03.904] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:39:03.905] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:39:03.905] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:39:03.905] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:40:44.419] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:40:44.419] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:40:44.423] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:40:44.423] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:40:44.429] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:40:44.430] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:40:44.430] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:40:44.430] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:41:00.021] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:41:00.022] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:41:00.027] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:41:00.027] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:41:00.035] [ERROR] errors - getPrescriptionsql: SELECT count(p.id) as total_rows
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+    
+[2024-11-10T22:41:00.035] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T22:41:00.036] [ERROR] errors - getPrescriptionsql: 
+          SELECT
+              p.*,
+              u.name,
+              doc.name AS doc_name,
+              u.birthdate AS age,
+              ps.name AS status
+  
+          FROM
+              prescription p
+          LEFT JOIN
+              users u on u.user_id = p.patient_id
+          LEFT JOIN
+              users doc on doc.user_id = p.created_by
+          LEFT JOIN
+              prescription_statuses ps on ps.id = p.status_id
+  
+        WHERE
+            p.created_by = undefined OR p.patient_id = undefined
+     ORDER BY p.created_at DESC LIMIT 0, 5
+[2024-11-10T22:41:00.036] [ERROR] errors - getPrescription: Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+[2024-11-10T23:33:48.627] [ERROR] errors - getAppointmentssql: 
+        SELECT
+            a.*,
+            u.name,
+            u.birthdate as age,
+            t.name AS doc
+        FROM
+            appointments a
+        LEFT JOIN
+            users u on u.user_id = a.patient_id
+        LEFT JOIN
+            users t on t.user_id = a.doc_id
+        WHERE 
+            a.deleted_at IS NULL
+   AND a.patient_id = '3' AND p.created_at BETWEEN "2024-11-01 00:00:00" AND "2024-12-01" ORDER BY a.created_at DESC LIMIT 0, 10
+[2024-11-10T23:33:48.628] [ERROR] errors - getAppointments: Error: ER_BAD_FIELD_ERROR: Unknown column 'p.created_at' in 'where clause'
+[2024-11-11T22:20:22.616] [ERROR] errors - getUserssql: SELECT count(*) as total_rows  from users a 
+    where a.deleted_at is null AND a.department_id = [object Object]
+[2024-11-11T22:20:22.616] [ERROR] errors - getUsers: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object]' at line 2
+[2024-11-11T22:20:22.617] [ERROR] errors - getUserssql: SELECT a.*,a.last_login_date AS last_login   from users a 
+    where a.deleted_at is null AND a.department_id = [object Object] LIMIT 0,20
+[2024-11-11T22:20:22.618] [ERROR] errors - getUsers: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object] LIMIT 0,20' at line 2
+[2024-11-11T22:20:47.770] [ERROR] errors - getUserssql: SELECT count(*) as total_rows  from users a 
+    where a.deleted_at is null AND a.department_id = [object Object]
+[2024-11-11T22:20:47.771] [ERROR] errors - getUsers: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object]' at line 2
+[2024-11-11T22:20:47.774] [ERROR] errors - getUserssql: SELECT a.*,a.last_login_date AS last_login   from users a 
+    where a.deleted_at is null AND a.department_id = [object Object] LIMIT 0,20
+[2024-11-11T22:20:47.774] [ERROR] errors - getUsers: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object] LIMIT 0,20' at line 2
+[2024-11-11T22:21:14.863] [ERROR] errors - getUserssql: SELECT count(*) as total_rows  from users a 
+    where a.deleted_at is null AND a.department_id = [object Object]
+[2024-11-11T22:21:14.863] [ERROR] errors - getUsers: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object]' at line 2
+[2024-11-11T22:21:14.864] [ERROR] errors - getUserssql: SELECT a.*,a.last_login_date AS last_login   from users a 
+    where a.deleted_at is null AND a.department_id = [object Object] LIMIT 0,20
+[2024-11-11T22:21:14.864] [ERROR] errors - getUsers: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[object Object] LIMIT 0,20' at line 2

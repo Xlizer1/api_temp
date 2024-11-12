@@ -179,12 +179,11 @@ function getUsers(allUsers, req, response) {
         var active_status = 0;
       }
 
-      console.log(searchFields);
-
       depModel.getDepartments(false, (departments) => {
         if (departments) {
           mod.sortDepartments(departments, (sortedDeps) => {
             mod.getUsers(
+              data,
               haveRole,
               user_id,
               sortedDeps,

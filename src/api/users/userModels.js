@@ -15,7 +15,9 @@ function insertUser(creator_id, userDetails, callback) {
     bcrypt
       .hash(userDetails.password, saltRounds)
       .then(function (hashedPassword) {
-        const wialonHost = userDetails?.wialon_host ? userDetails?.wialon_host : "";
+        const wialonHost = userDetails?.wialon_host
+          ? userDetails?.wialon_host
+          : "";
         const sql = `BEGIN;
                 INSERT INTO users (
                   username, password, name, email, department_id, phone, patients_per_day, 
@@ -24,16 +26,26 @@ function insertUser(creator_id, userDetails, callback) {
                   alcohol, physical_activity, chronic_disease
                 ) 
                 VALUES (
-                  "${userDetails?.username}", "${hashedPassword}", "${userDetails?.name}", 
-                  "${userDetails?.email}", ${userDetails?.depId}, "${userDetails?.phone}", 
-                  "${userDetails?.patients_per_day}", "${userDetails?.birthdate}", 
+                  "${userDetails?.username}", "${hashedPassword}", "${
+          userDetails?.name
+        }", 
+                  "${userDetails?.email}", ${userDetails?.depId}, "${
+          userDetails?.phone
+        }", 
+                  "${userDetails?.patients_per_day}", "${
+          userDetails?.birthdate
+        }", 
                   "${getDateTime()}", "${userDetails?.account_name || ""}", 
                   "${userDetails?.default_route || ""}", 
                   ${userDetails?.allow_send_emails ? 1 : 0}, 
-                  ${userDetails?.is_group_base_role ? 1 : 0}, ${userDetails?.height}, 
+                  ${userDetails?.is_group_base_role ? 1 : 0}, ${
+          userDetails?.height
+        }, 
                   ${userDetails?.weight}, "${userDetails?.blood_type}", 
                   "${userDetails?.surgeries}", ${userDetails?.smoking ? 1 : 0}, 
-                  ${userDetails?.alchohol ? 1 : 0}, ${userDetails?.physical_activity ? 1 : 0}, 
+                  ${userDetails?.alchohol ? 1 : 0}, ${
+          userDetails?.physical_activity ? 1 : 0
+        }, 
                   ${userDetails?.chronic_disease ? 1 : 0}
                 );
 
@@ -62,7 +74,7 @@ function insertUser(creator_id, userDetails, callback) {
                     smoking: userDetails?.smoking,
                     alchohol: userDetails?.alchohol,
                     physical_activity: userDetails?.physical_activity,
-                    chronic_disease: userDetails?.chronic_disease
+                    chronic_disease: userDetails?.chronic_disease,
                   })}', '${getDateTime()}'
                 );
                 COMMIT;`;
@@ -289,7 +301,14 @@ function updateUserPassword(data, user_id, new_password, callback) {
   });
 }
 
-function getUsers(haveRole, user_id, departments, searchFields, callback) {
+function getUsers(
+  data,
+  haveRole,
+  user_id,
+  departments,
+  searchFields,
+  callback
+) {
   var select = `SELECT a.*,a.last_login_date AS last_login  `;
   let selectTotal = `SELECT count(*) as total_rows `;
   let sql = ` from users a 
@@ -319,17 +338,16 @@ function getUsers(haveRole, user_id, departments, searchFields, callback) {
   if (searchFields.accountname) {
     sql += ` AND a.account_name LIKE '%${searchFields.accountname}%'`;
   }
-  if (searchFields.department_id) {
-    sql += ` AND a.department_id = ${searchFields.department_id}`;
+  if (data.user_department_id === 1) {
+    if (searchFields.department_id) {
+      sql += ` AND a.department_id = ${searchFields.department_id}`;
+    }
   } else {
-    sql += ` AND a.department_id != 3`;
+    sql += ` AND a.department_id = 3`;
   }
   if (searchFields.active_status || searchFields.active_status === 0) {
     sql += ` AND a.enabled = ${searchFields.active_status}`;
   }
-  // else{
-  //     sql+=` AND a.department_id != 12`
-  // }
 
   executeQuery(selectTotal + sql, "getUsers", (resultTotal) => {
     let totalRows = -1;
@@ -340,6 +358,7 @@ function getUsers(haveRole, user_id, departments, searchFields, callback) {
       searchFields.itemsPerPage
     }`;
     executeQuery(select + sql, "getUsers", (result) => {
+      console.log(select + sql)
       sortUsersData(haveRole, result, departments, (_data) => {
         let reponse = {
           total: totalRows,

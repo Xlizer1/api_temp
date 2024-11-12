@@ -7,7 +7,15 @@ const {
 
 async function getPrescription(data, params, callBack) {
   const user_department_id = data?.user_department_id;
-  const { note, patient_id, doctor_id, itemsPerPage, offset } = params;
+  const {
+    note,
+    patient_id,
+    from_date,
+    to_date,
+    doctor_id,
+    itemsPerPage,
+    offset,
+  } = params;
 
   let selectTotal = `SELECT count(p.id) as total_rows`;
 
@@ -35,17 +43,23 @@ async function getPrescription(data, params, callBack) {
   } else {
     sql += `
         WHERE
-            p.created_by = ${patient_id} OR p.patient_id = ${patient_id}
+            p.created_by = ${patient_id || doctor_id} OR p.patient_id = ${
+      patient_id || doctor_id
+    }
     `;
   }
 
-  if (patient_id) {
-    sql += ` AND p.patient_id = ${patient_id}`;
+  if (from_date && to_date) {
+    sql += ` AND p.created_at BETWEEN "${from_date} 00:00:00" AND "${to_date}"`;
   }
 
-  if (doctor_id) {
-    sql += ` AND doc.user_id LIKE "%${doctor_id}%"`;
-  }
+  // if (patient_id) {
+  //   sql += ` AND p.patient_id = ${patient_id}`;
+  // }
+
+  // if (doctor_id) {
+  //   sql += ` AND doc.user_id = ${doctor_id}`;
+  // }
 
   if (note) {
     sql += ` AND p.note LIKE "%${note}%"`;
@@ -63,7 +77,7 @@ async function getPrescription(data, params, callBack) {
       selectSql + sql + paginationSQL,
       "getPrescription",
       async (result) => {
-        if (result) {
+        if (result?.length && result[0]) {
           const updatedResult = await Promise.all(
             result.map(async (prescription) => {
               const sqlRequestFinances = `
@@ -98,7 +112,7 @@ async function getPrescription(data, params, callBack) {
 
           // Once all asynchronous operations are done, call the callback
           callBack({ total: totalRows, data: updatedResult });
-        } else callBack(false);
+        } else callBack({ total: 0, data: [] });
       }
     );
   });
@@ -136,7 +150,7 @@ async function createPrescription(data, params, callBack) {
 
 async function updatePrescription(data, params, callBack) {
   const { prescription_id, prescription, pharmacist_note } = params;
-  
+
   var sql = `
       UPDATE prescription
       SET

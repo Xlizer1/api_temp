@@ -46,7 +46,7 @@ async function getAppointments(data, params, callBack) {
 
 async function getAllAppointments(data, params, callBack) {
   const { user_id, user_department_id } = data;
-  const { offset, itemsPerPage, patient_id } = params;
+  const { offset, from_date, to_date, itemsPerPage, patient_id } = params;
 
   var sql = `
         SELECT
@@ -66,6 +66,10 @@ async function getAllAppointments(data, params, callBack) {
 
   if (patient_id) {
     sql += ` AND a.patient_id = '${patient_id}'`;
+  }
+
+  if (from_date && to_date) {
+    sql += ` AND a.created_at BETWEEN "${from_date} 00:00:00" AND "${to_date}"`;
   }
 
   sql += ` ORDER BY a.created_at DESC LIMIT ${
